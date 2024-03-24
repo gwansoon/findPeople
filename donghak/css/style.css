@@ -1,0 +1,26 @@
+.joinDivStyle {
+    width: 50%; /* 원하는 너비 설정 */
+    margin: 0 auto; /* 좌우 여백을 자동으로 조절하여 가운데 정렬 */
+    border-bottom: 1px solid #ccc; /* 가로선 추가 */
+    padding-bottom: 20px; /* 선택적으로 가로선과 내용 사이의 간격 조절 */
+}
+
+.joinDivStyle ul li {
+    margin-bottom: 10px; /* 각 li 태그들에게 아래쪽 마진을 주어 간격 조절 */
+}
+
+.joinDivStyle h2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.joinDivStyle ul li {
+    display: flex;
+    align-items: center;
+}
+
+.joinDivStyle ul li input[type="text"] {
+    flex: 1;
+    margin-left: 10px; /* Adjust as needed */
+}
