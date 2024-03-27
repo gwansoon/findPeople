@@ -3,41 +3,30 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
 	<link rel="stylesheet" href="css/style.css">
-	<title>WorkSpace</title>
+	<script src="jquery-3.7.1.min.js"></script>
 </head>
 <body>
-	<div id="join-div" class="joinDivStyle">
-		<img src="" alt="">
-		<h2 class="join_h2">회원가입</h2>
-		<form id="join-form">
-			<ul>
-				<li>
-					아이디 <input type="text" placeholder="아이디 입력">
-				</li>
-				<li>
-					비밀번호 <input type="text" placeholder="비밀번호 입력">
-				</li>
-				<li>
-					비멀번호 확인 <input type="text" placeholder="아이디 입력">
-				</li>
-				<li>
-					닉네임 <input type="text" placeholder="아이디 입력">
-				</li>
-				<li>
-					핸드폰 번호 <input type="text" placeholder="아이디 입력">
-				</li>
-				<li>
-					성별 <input type="text" placeholder="아이디 입력">
-				</li>
-				<li>
-					나이 <input type="text" placeholder="아이디 입력">
-				</li>
-			</ul>
-			<button>취소</button>
-			<button>확인</button>
+	<section class="login-form">
+		<h1>LOGO DESIGN</h1>
+		<form action="">
+			<div class="int-area">
+				<input type="text" name="id" id="id" autocomplete="off" required>
+				<label for="id">USER NAME</label>
+			</div>
+			<div class="int-area">
+				<input type="password" name="pw" id="pw" autocomplete="off" required>
+				<label for="pw">PASSWORD</label>
+			</div>
+			<div class="btn-area">
+				<button type="submit">LOGIN</button>
+			</div>
 		</form>
-	</div>
-	<script src="js/join.js"></script>	
+		<div class="caption">
+			<a href="">Forget Password</a>
+		</div>
+	</section>
+	
 </body>
 </html>

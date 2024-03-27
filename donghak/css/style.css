@@ -1,26 +1,82 @@
-.joinDivStyle {
-    width: 50%; /* 원하는 너비 설정 */
-    margin: 0 auto; /* 좌우 여백을 자동으로 조절하여 가운데 정렬 */
-    border-bottom: 1px solid #ccc; /* 가로선 추가 */
-    padding-bottom: 20px; /* 선택적으로 가로선과 내용 사이의 간격 조절 */
+@import url(`https://fonts.googleapis.com/css?family=Tangerine`);
+
+* {
+    margin: 9;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.joinDivStyle ul li {
-    margin-bottom: 10px; /* 각 li 태그들에게 아래쪽 마진을 주어 간격 조절 */
-}
-
-.joinDivStyle h2 {
+body {
+    font-family: 'Tangerine', serif;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    /* height: 100vh; */
+    /* background: url("../img/0.jpg") no-repeat center; */
+    /* background-size: cover; */
+} 
+
+/* body::before {
+    content: "";
+    position: absolute; z-index: 1;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background-color: rgba(0,0,0,.7);
+} */
+
+.login-form {
+    border: solid 0.1px;
+    position: relative;
+}
+.login-form h1 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 60px;
 }
 
-.joinDivStyle ul li {
-    display: flex;
-    align-items: center;
+.int-area {
+    width: 400px; position: relative;
+}
+.int-area:first-child {margin-top: 0;}
+.int-area input {
+    width: 100%;
+    padding: 20px 10px 10px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #999;
+    font-size: 18px; color: #fff;
+    outline: none;
+}
+.int-area label {
+    position: absolute; left: 10px; top: 15px;
+    font-size: 18px; color: #999;
+    transition: top .5s ease;
 }
 
-.joinDivStyle ul li input[type="text"] {
-    flex: 1;
-    margin-left: 10px; /* Adjust as needed */
+.int-area input:focus + label,
+.int-area input:valid + label {
+    top: 5px;
+    font-size: 13px; color: #166cea;
+}
+
+.btn-area {
+    margin-top: 30px;
+    justify-content: flex-start;
+}
+.btn-area button {
+    width: 30%; height: 50px;
+    background: #166cea;
+    color: #fff;
+    font-size: 15px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.caption {
+    margin-top: 20px;
+    text-align: center;
+}
+.caption a {
+    font-size: 15px; color: #999;
+    text-decoration: none;
 }
