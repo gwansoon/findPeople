@@ -24,8 +24,10 @@
 
 
 .headerTitle {
-	font-size: 1.3rem;
+	font-size: 1.5rem;
 	margin-left: 7px;
+	text-decoration: none;
+	color: black;
 }
 
 .headerCenter {
@@ -38,6 +40,17 @@
 	font-size: 1.1rem;
 	text-decoration: none;
 	color: black;
+}
+
+.headerEnd {
+	display: flex;
+}
+
+.headerHamburger {
+	border: none;
+	background-color: transparent;
+	font-size: 1.5rem;
+	cursor: pointer;
 }
 
 /* .headerForm {
