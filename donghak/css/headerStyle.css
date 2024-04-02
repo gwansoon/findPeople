@@ -1,0 +1,168 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+
+.headerWrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color:  #fff;
+	z-index: 20;
+}
+.header {
+	box-shadow: 0 0 3px #000;
+	/* position: fixed;
+	
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color:  #fff;
+	z-index: 20;
+	box-shadow: 0 0 3px #000; */
+}
+
+.headerContainer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 60px;
+	padding: 0 10px;
+}
+
+.headerStart {
+	margin: 0;
+	height: 40px;
+	line-height: 40px;
+}
+
+
+.headerTitle {
+	font-size: 1.5rem;
+	margin-right: 7px;
+	margin-left: 5px;
+	text-decoration: none;
+	color: black;
+}
+
+.headerCenter {
+	width: 70%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.headerCenter a {
+	font-size: 1.1rem;
+	text-decoration: none;
+	color: black;
+}
+
+.headerEnd {
+	display: flex;
+	list-style: none;
+}
+
+.headerEnd ul, li{
+	list-style: none;
+}
+
+.headerHamburger {
+	border: none;
+	background-color: transparent;
+	font-size: 1.5rem;
+	cursor: pointer;
+}
+
+.hamburgerListWrapper {
+	display: none;
+	position: absolute;
+	top: 100%; /* Position it below the header */
+	right: 0; /* Align it with the left edge of the header */
+	margin-top: 0px; /* Add some margin from the header */
+	width: 150px;
+}
+
+.hamburgerList {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border: solid 1px black;
+	border-top: none;
+}
+
+.hamburgerList li {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.hamburgerList a{
+	text-decoration: none;
+	color: black;
+}
+
+/* .headerForm {
+	display: flex;
+	max-width: 100%;
+} */
+
+/* .headerInputText {
+	width: calc(100% - 60px);
+	height: 40px;
+	padding: 0 6px;
+	border: 1px solid #8f8f8f;
+	border-right: none;
+	border-radius: 2px 0 0 2px;
+} */
+
+/* .headerInputButton {
+	width: 60px;
+	height: 42px;
+	border: 1px solid #8f8f8f;
+	border-left: none;
+	border-radius: 0 2px 2px 0;
+} */
+
+/* .headerEnd {
+	display: flex;
+} */
+/* .headerHamburger {
+	border: none;
+	background-color: transparent;
+	font-size: 1.5rem;
+} */
+
+/* .headerSearch {
+	display: none;
+	margin-right: 5px;
+	border: none;
+	background-color: transparent;
+	font-size: 1.5rem;
+} */
+
+/* .headerProfile {
+	width: 40px;
+	height: 40px;
+	border: 1px solid #eaeaea;
+	border-radius: 50%;
+	background-color: red;
+} */
+
+/* @media screen and (max-width: 800px) {
+	.headerTitle{
+		display: none;
+	}
+
+}
+
+@media screen and (max-width: 600px) {
+	.headerCenter {
+		display: none;
+	}
+.headerSearch {
+		display: block;
+	}
+} */
+	
