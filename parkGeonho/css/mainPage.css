@@ -1,0 +1,49 @@
+body { margin: 0; }
+
+.mainImg {
+    position: fixed;
+    display: block;
+    object-fit: fill;
+    width: 100vw;
+    mask-image: linear-gradient(to top, black 85%, transparent 100%);
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 16vh;
+}
+
+.Title {
+    position: fixed;
+    display: inline-block;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-family: "Permanent Marker", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 10vw;
+    text-shadow: 2px 2px 4px gray;
+}
+
+.nav .menu {
+    display: flex;
+    width: 100vw;
+    height: 5vh;
+    margin-top: 7vh;
+}
+
+.nav .menu a {
+    position: fixed;
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 300;
+    font-size: 2.3vw;
+    text-decoration: none;
+    color: black;
+}
+
+.nav .menu .first { left: 10vw; }
+.nav .menu .second { left: 25vw; }
+.nav .menu .third { left: 70vw; }
+.nav .menu .fourth { left: 85vw; }
