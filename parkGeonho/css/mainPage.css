@@ -131,29 +131,44 @@ body {
     text-shadow: 2px 2px 4px gray;
 }
 
+.mainPopup a {
+    position: fixed;
+    width: 7vw;
+    height: 9vw;
+    left: 0;
+    transform: translate(-50%, 0);
+}
+
+.mainPopup .study { left: 20vw; }
+.mainPopup .excurr { left: 32vw; }
+.mainPopup .exer { left: 44vw; }
+.mainPopup .meal { left: 56vw; }
+.mainPopup .car { left: 68vw; }
+.mainPopup .taxi { left: 80vw; }
+
 .mainPopup img {
+    pointer-events: none;
     position: fixed;
     display: block;
     object-fit: fill;
     width: 7vw;
     filter: drop-shadow(0px 0px 1px gray);
-    transform: translate(-50%,0);
 }
 
-.mainPopup .study, #study { left: 20vw; }
-.mainPopup .excurr, #excurr { left: 32vw; }
-.mainPopup .exer, #exer { left: 44vw; }
-.mainPopup .meal, #meal { left: 56vw; }
-.mainPopup .car, #car { left: 68vw; }
-.mainPopup .taxi, #taxi { left: 80vw; }
-
 .mainPopup .detail {
+    pointer-events: none;
     position: fixed;
     font-family: "Noto Sans KR", sans-serif;
     font-weight: 300;
     font-size: 1.5vw;
-    top: 22vh;
+    top: 12vh;
     text-decoration: none;
     color: black;
-    transform: translate(-50%,0);
 }
+
+.mainPopup #study {left: 20%;}
+.mainPopup #excurr {left: 20%;}
+.mainPopup #exer {left: 30%;}
+.mainPopup #meal {left: 30%;}
+.mainPopup #car {left: 30%;}
+.mainPopup #taxi {left: 30%;}
