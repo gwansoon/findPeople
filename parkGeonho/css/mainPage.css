@@ -135,7 +135,7 @@ body {
     position: fixed;
     width: 7vw;
     height: 9vw;
-    left: 0;
+    left: -10vw;
     transform: translate(-50%, 0);
 }
 
