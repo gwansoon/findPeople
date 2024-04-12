@@ -1,6 +1,6 @@
 html {
     width: 100vw;
-    height: 120vh;
+    height: 100vh;
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
     scroll-behavior: smooth;
@@ -13,7 +13,7 @@ html::-webkit-scrollbar {
 body {
     margin: 0;
     width: 100vw;
-    height: 150vh;
+    height: 200vh;
 }
 
 .mainImg {
@@ -62,20 +62,38 @@ body {
 .nav .menu .third { left: 70vw; }
 .nav .menu .fourth { left: 85vw; }
 
-#popUp {
+.mainGif_scrolldown {
     position: fixed;
     display: block;
     object-fit: fill;
     width: 5vw;
     left: 50%;
     top: 85%;
-    translate: -50% 0;
+    transform: translate(-50%, 0) rotate(-180deg);
     opacity: 1;
     transition: opacity 0.5s ease-in-out;
+    animation: scroll_gif 1s both;
+    animation-timeline: scroll();
 }
 
-#popUp:focus {
+#txt_scroll_down {
+    position: fixed;
+    display: block;
+    left: 50%;
+    top: 91%;
+    transform: translate(-50%, 0);
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px white;
     opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    animation: scroll_gif 1s both;
+    animation-timeline: scroll();
+}
+
+@keyframes scroll_gif {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
 }
 
 .mainPopup {
@@ -87,9 +105,22 @@ body {
     height: 28vh;
     top: 71vh;
     left: 1vw;
-    opacity: 0;
+    opacity: 1;
     background-color: rgba(255, 255, 255, 0.90);
     transition: all 0.5s ease-in-out;
+    animation: scroll_div 1s both;
+    animation-timeline: scroll();
+}
+
+@keyframes scroll_div {
+    0% {
+        translate: 0 100%;
+        opacity: 0;
+    }
+    100% {
+        translate: 0 0;
+        opacity: 0.95;
+    }
 }
 
 .popUpTitle {
@@ -109,28 +140,20 @@ body {
     transform: translate(-50%,0);
 }
 
-.mainPopup .study { left: 20vw; }
-.mainPopup .excurr { left: 32vw; }
-.mainPopup .exer { left: 44vw; }
-.mainPopup .meal { left: 56vw; }
-.mainPopup .car { left: 68vw; }
-.mainPopup .taxi { left: 80vw; }
+.mainPopup .study, #study { left: 20vw; }
+.mainPopup .excurr, #excurr { left: 32vw; }
+.mainPopup .exer, #exer { left: 44vw; }
+.mainPopup .meal, #meal { left: 56vw; }
+.mainPopup .car, #car { left: 68vw; }
+.mainPopup .taxi, #taxi { left: 80vw; }
 
 .mainPopup .detail {
     position: fixed;
     font-family: "Noto Sans KR", sans-serif;
     font-weight: 300;
     font-size: 1.5vw;
-    top: 93vh;
+    top: 22vh;
     text-decoration: none;
     color: black;
     transform: translate(-50%,0);
 }
-
-.mainPopup #study { left: 20vw; }
-.mainPopup #excurr { left: 32vw; }
-.mainPopup #exer { left: 44vw; }
-.mainPopup #meal { left: 56vw; }
-.mainPopup #car { left: 68vw; }
-.mainPopup #taxi { left: 80vw; }
-
