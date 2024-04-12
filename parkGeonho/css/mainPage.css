@@ -135,16 +135,15 @@ body {
     position: fixed;
     width: 7vw;
     height: 9vw;
-    left: -10vw;
     transform: translate(-50%, 0);
 }
 
-.mainPopup .study { left: 20vw; }
-.mainPopup .excurr { left: 32vw; }
-.mainPopup .exer { left: 44vw; }
-.mainPopup .meal { left: 56vw; }
-.mainPopup .car { left: 68vw; }
-.mainPopup .taxi { left: 80vw; }
+.mainPopup .study { left: 18vw; }
+.mainPopup .excurr { left: 30vw; }
+.mainPopup .exer { left: 42vw; }
+.mainPopup .meal { left: 54vw; }
+.mainPopup .car { left: 66vw; }
+.mainPopup .taxi { left: 78vw; }
 
 .mainPopup img {
     pointer-events: none;
