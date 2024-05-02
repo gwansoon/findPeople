@@ -56,9 +56,10 @@
 
 .headerCenter a {
 	font-size: 1.1rem;
-	min-width: 100px;
+	min-width: 80px;
 	text-decoration: none;
 	color: #fff;
+	padding-left: 8px;
 }
 
 .headerEnd {

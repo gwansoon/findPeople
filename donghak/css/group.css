@@ -1,0 +1,38 @@
+
+.contentWrapper {
+    display: flex;
+    justify-content: center;
+    background-color: #ffff;
+    /* background-color: blue; */
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    width: 840px;
+    gap: 20px;
+    margin-top: 20px;
+    /* background-color: red; */
+}
+
+.content li {
+	border: solid 2px #7694AB;
+	border-radius: 30px;
+    width: 400px;
+    height: 120px;
+    justify-items: center;
+	/* background-color: red; */
+    /* width: 40%; */
+    /* max-width: 400px; */
+    /* min-width: 270px; */
+}
+
+.content li a {
+    font-size: 30px;
+    border: solid 2px red;
+    width: 20px;
+    height: 200px;
+	padding-left: 1px;
+}
