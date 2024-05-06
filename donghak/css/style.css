@@ -11,7 +11,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* height: 100vh; */
+    height: 100vh;
     /* background: url("../img/0.jpg") no-repeat center; */
     /* background-size: cover; */
 } 
@@ -58,12 +58,21 @@ body {
     font-size: 13px; color: #166cea;
 }
 
-.btn-area {
-    margin-top: 30px;
-    justify-content: flex-start;
+.btn-areaWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
+
+.btn-area {
+width: 100%;
+margin-top: 30px;
+display: flex;
+justify-content: center;
+}
+
 .btn-area button {
-    width: 30%; height: 50px;
+    width: 50%; height: 40px;
     background: #166cea;
     color: #fff;
     font-size: 15px;
