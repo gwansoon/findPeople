@@ -1,0 +1,108 @@
+html {
+    height: 160vh;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    z-index: 99;
+    position: fixed;
+    display: flex;
+    justify-content: flex-start;
+    height: 7vh;
+    width: 100vw;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+}
+
+#navLogo {
+    margin-left: 1vw;
+    font-size: 25pt;
+    font-weight: 600;
+    transform: translate(0, -10%);
+}
+
+#navIcon {
+    margin-right: 2vw;
+    margin-left: auto;
+}
+
+#detailBox {
+    position: absolute;
+    height: 150vh;
+    width: 45vw;
+    margin-top: 7vh;
+    translate: 60% 0;
+    background-color: rgb(235, 235, 235)
+}
+
+#imgBox {
+    position: fixed;
+    display: inline-block;
+    width: 43vw;
+    height: 38vh;
+    margin-top: 1vw;
+    margin-left: 1vw;
+    border-radius: 15px;
+    background-color: rgb(251, 243, 255);
+}
+
+#titleBox {
+    position: fixed;
+    display: inline-block;
+    width: 38vw;
+    height: 13vh;
+    margin-top: 32vh;
+    margin-left: 3.5vw;
+    border-radius: 20px;
+    text-align: center;
+    background-color: white;
+}
+
+#head {
+    margin-top: 1vh;
+    font-size: 18pt;
+}
+
+#title {
+    font-size: 28pt;
+    font-weight: 700;
+}
+
+#category, #member {
+    position: fixed;
+    font-weight: 300;
+    margin-left: 20px;
+}
+
+#contentBox {
+    position: fixed;
+    display: inline-block;
+    margin-top: 47vh;
+    width: 45vw;
+    height: 103vh;
+}
+
+#category {
+    margin-top: 2vh;
+    margin-left: 1vw;
+    font-size: 18pt;
+}
+
+#member {
+    margin-top: 5.5vh;
+    margin-left: 1vw;
+    font-size: 15pt;
+}
+
+#content {
+    margin-top: 10vh;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    font-size: 18pt;
+    font-weight: 500;
+}
