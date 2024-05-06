@@ -54,17 +54,17 @@
 .groupCategory {
     width: 100%;
     height: 20%;
-    
+    text-align: start;    
 }
 
 .groupSubject {
     width: 100%;
     height: 40%;
-    
+    text-align: center;
 }
 
 .groupDate {
     width: 100%;
     height: 40%;
-
+    text-align: center;
 }
