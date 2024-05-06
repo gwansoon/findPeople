@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/detail.css">
+    <link rel="stylesheet" href="../resources/static/css/detail.css">
     <title>Detail</title>
 </head>
 <body>
