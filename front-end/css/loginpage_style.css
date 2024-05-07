@@ -1,36 +1,27 @@
-@import url(`https://fonts.googleapis.com/css?family=Tangerine`);
-
 * {
     margin: 9;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
-    font-family: 'Tangerine', serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    /* background: url("../img/0.jpg") no-repeat center; */
-    /* background-size: cover; */
+    background-color: #ffffff; */
 } 
 
-/* body::before {
-    content: "";
-    position: absolute; z-index: 1;
-    top: 0; right: 0; bottom: 0; left: 0;
-    background-color: rgba(0,0,0,.7);
-} */
-
 .login-form {
-    border: solid 0.1px;
+    border: solid 3px #C7E2F6;
     position: relative;
+    background-color: #ffffff;
 }
 .login-form h1 {
-    font-size: 32px;
     text-align: center;
+    font-size: 32px;
+	color: #7694AB;
     margin-bottom: 60px;
+    margin-top: 30px;
 }
 
 .int-area {
@@ -42,10 +33,12 @@ body {
     padding: 20px 10px 10px;
     background-color: transparent;
     border: none;
-    border-bottom: 1px solid #999;
-    font-size: 18px; color: #fff;
+    border-bottom: 1px solid #7694AB;
+    font-size: 18px;
+    color: #7694AB;
     outline: none;
 }
+
 .int-area label {
     position: absolute; left: 10px; top: 15px;
     font-size: 18px; color: #999;
@@ -55,37 +48,48 @@ body {
 .int-area input:focus + label,
 .int-area input:valid + label {
     top: 5px;
-    font-size: 13px; color: #166cea;
+    font-size: 13px; color: #7694AB;
 }
 
 .btn-areaWrapper {
     width: 100%;
     display: flex;
     justify-content: center;
+    gap: 30px;
 }
 
 .btn-area {
-width: 100%;
-margin-top: 30px;
-display: flex;
-justify-content: center;
+    width: 30%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #8DB1FF;
+    border-radius: 10px;
+}
+
+.btn-area * {
+    color: #fff;
+    font-size: 20px;
 }
 
 .btn-area button {
-    width: 50%; height: 40px;
-    background: #166cea;
-    color: #fff;
-    font-size: 15px;
+    background-color: #8DB1FF;
     border: none;
-    border-radius: 20px;
-    cursor: pointer;
+    cursor: pointer;   
+}
+
+.btn-area a {
+    text-decoration: none;
 }
 
 .caption {
     margin-top: 20px;
     text-align: center;
 }
+
 .caption a {
-    font-size: 15px; color: #999;
+    font-size: 15px;
+    color: #999;
     text-decoration: none;
 }

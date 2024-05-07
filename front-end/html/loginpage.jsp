@@ -6,13 +6,13 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-	<link rel="stylesheet" href="../css/loginpage_style.css">
+	<title>파피</title>
+	<link rel="stylesheet" href="../resources/static/css/loginpage_style.css">
 	<script src="jquery-3.7.1.min.js"></script>
 </head>
 <body>
 	<section class="login-form">
-		<h1>POPPY</h1>
+		<h1>파피</h1>
 		<form action="">
 			<div class="int-area">
 				<input type="text" name="id" id="id" autocomplete="off" required>
