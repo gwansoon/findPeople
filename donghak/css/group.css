@@ -73,11 +73,20 @@
     color : black;
 }
 
-.groupDate {
+.groupBottomWrapper {
     margin-top: 5px;
     width: 100%;
     height: 40%;
-    text-align: start;
     font-size: 0.9rem;
     color : gray;
+    display: flex;
+    align-items: center;
+}
+
+.groupDate {
+    width: 60%;
+}
+
+.groupMember {
+    width: 40%;
 }
