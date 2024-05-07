@@ -1,0 +1,108 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+
+.headerWrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color:  #7694AB;
+}
+
+.header {
+	box-shadow: 0 0 3px #000;
+}
+
+.headerContainer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 60px;
+	padding: 0 20px;
+}
+
+.headerStart {
+	margin: 0;
+	height: 40px;
+	line-height: 40px;
+}
+
+.headerTitle {
+	font-size: 1.5rem;
+	margin-right: 7px;
+	margin-left: 5px;
+	text-decoration: none;
+	color: #fff;
+}
+
+.headerCenter {
+	width: 70%;
+	display: flex;
+	justify-content: space-between;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	/* 스크롤바 없애기 */
+	-ms-overflow-style: none; /* 인터넷 익스플로러 */
+	scrollbar-width: none; /* 파이어폭스 */
+}
+/* ( 크롬, 사파리, 오페라, 엣지 ) 동작 */
+.headerCenter::-webkit-scrollbar {
+	display: none;
+  }
+  
+
+.headerCenter a {
+	font-size: 1.1rem;
+	min-width: 80px;
+	text-decoration: none;
+	color: #fff;
+	padding-left: 8px;
+}
+
+.headerEnd {
+	display: flex;
+	list-style: none;
+}
+
+.headerEnd ul, li{
+	list-style: none;
+}
+
+.headerHamburger {
+	border: none;
+	background-color: transparent;
+	font-size: 1.5rem;
+	color: #fff;
+	cursor: pointer;
+}
+
+.hamburgerListWrapper {
+	display: none;
+	position: absolute;
+	right: 0;
+	top: 100%; 
+	width: 150px;
+	background-color: #fff;
+}
+
+.hamburgerList {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border: solid 1px black;
+	border-top: none;
+}
+
+.hamburgerList li {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.hamburgerList a{
+	text-decoration: none;
+	color: black;
+}
