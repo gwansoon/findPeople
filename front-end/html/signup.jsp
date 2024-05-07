@@ -1,69 +1,83 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/singup_style.css">
+    <link rel="stylesheet" href="../resources/static/css/headerStyle.css">
+    <link rel="stylesheet" href="../resources/static/css/signupStyle.css">
 </head>
 <body>
+    <div class="headerWrapper"> <!-- header start -->
+		<nav class="header">
+			<div class="headerContainer">
+				<h1 class="headerStart">
+					<a class="headerTitle" href=""> FindPeople </a>
+				</h1>
+				<div class="headerCenter">
+					<a href="">전체</a>
+					<a href="">비교과</a>
+					<a href="">스터디</a>
+					<a href="">택시</a>
+					<a href="">카풀</a>
+					<a href="">식사</a>
+					<a href="">헬스</a>
+				</div>
+				<div class="headerEnd">
+					<button class="headerHamburger">&#9776;</button>
+				</div>
+			</div>
+		</nav>
+		<div class="hamburgerListWrapper">	
+			<ul class="hamburgerList">
+				<li><a href="">메뉴1</a></li>
+				<li><a href="">메뉴2</a></li>
+				<li><a href="">메뉴3</a></li>
+				<li><a href="">메뉴4</a></li>
+			</ul>
+		</div>
+	</div> <!-- header end -->
     <section class="signin-form">
-        <h1>  logo  </h1>
+        <h1> 회원가입 </h1>
         <form action>
             <div class="int-area">
-                <input type ="text" name ="id" autocomplete="off" required>
-                <label for ="id"> 이름</label>
+                <input type ="text" name ="userId" autocomplete="off" required>
+                <label for ="userId"> 이름</label>
             </div >
             <div class="int-area">
-                <input type="text" name="pw" autocomplete="off" required >
-                <label for="password">비밀번호</label>
+                <input type="text" name="userPass" autocomplete="off" required >
+                <label for="userPass">비밀번호</label>
             </div>
             <div class="int-area">
-                <input type="text" name="pwck" auticomplete="off"required >
-                <label for = "pwcheck">비밀번호 확인</label>
+                <input type="text" name="userpassCheck" auticomplete="off"required >
+                <label for = "userpassCheck">비밀번호 확인</label>
             </div>
             <!--<div>-->
                 <div class="int-area">
-                    <input type="text" name="fk"auticomplete="off"required >
-                    <label for ="fakename">닉네임</label> 
+                    <input type="text" name="userNick"auticomplete="off"required >
+                    <label for ="userNick">닉네임</label> 
                 </div>
             <!--</div>-->
             <div = class="int-area">
-                <input type="text"name="ph"autiocomplete="off"required >
-                <label for="phnumber">번호</label>
+                <input type="text"name="userTel"autiocomplete="off"required >
+                <label for="userTel">전화번호</label>
             </div>
             <div class="int-area">
-                <b>생년월일</b>
-                <div class="field birth">
-                    <input type="number" placeholder="년(4자)">                
-                    <select>
-                        <option value="">월</option>
-                        <option value="">1월</option>
-                        <option value="">2월</option>
-                        <option value="">3월</option>
-                        <option value="">4월</option>
-                        <option value="">5월</option>
-                        <option value="">6월</option>
-                        <option value="">7월</option>
-                        <option value="">8월</option>
-                        <option value="">9월</option>
-                        <option value="">10월</option>
-                        <option value="">11월</option>
-                        <option value="">12월</option>
-                    </select>
-                    <input type="number" placeholder="일">
+                <input type="text"name="userAge"autiocomplete="off"required >
+                <label for="userAge"> 나이 </label>
                 </div>
             </div>
             <div class="memberinfo_radio">
                 <b>성별</b>
                 <span>
-                    <input type="radio" id="female"name="gender"value="female">
+                    <input type="radio" id="female"name="userGender"value=1>
                     <label for="female" style="font-size: 18px; color: #1a1919;">여성</label>
                 </span>
                 <span>
-                    <input type="radio" id=male name="gender"value="male">
+                    <input type="radio" id=male name="userGender"value=0>
                     <label for="male" style="font-size: 18px; color: #1a1919;">남성</label>
                 </span>
             </div>
@@ -72,9 +86,6 @@
             </div>
             
     
-
-
-
         </form>
     </section>
 
