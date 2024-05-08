@@ -7,8 +7,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #ffffff; */
+    height: 85vh;
+    background-color: #ffffff;
 } 
 
 .login-form {
@@ -25,12 +25,13 @@ body {
 }
 
 .int-area {
-    width: 400px; position: relative;
+    width: 450px; position: relative;
 }
 .int-area:first-child {margin-top: 0;}
 .int-area input {
     width: 100%;
-    padding: 20px 10px 10px;
+    padding-top: 20px;
+    padding-bottom: 10px;
     background-color: transparent;
     border: none;
     border-bottom: 1px solid #7694AB;
@@ -84,7 +85,8 @@ body {
 }
 
 .caption {
-    margin-top: 20px;
+    margin-top: 23px;
+    margin-bottom: 10px;
     text-align: center;
 }
 
