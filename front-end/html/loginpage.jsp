@@ -7,12 +7,43 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>파피</title>
+	<link rel="stylesheet" href="../resources/static/css/headerStyle.css">
 	<link rel="stylesheet" href="../resources/static/css/loginpage_style.css">
 	<script src="jquery-3.7.1.min.js"></script>
 </head>
 <body>
+	<div class="headerWrapper"> <!-- header start -->
+		<nav class="header">
+			<div class="headerContainer">
+				<h1 class="headerStart">
+					<a class="headerTitle" href="">FindPeople</a>
+				</h1>
+				<div class="headerCenter">
+					<a href="">전체</a>
+					<a href="">비교과</a>
+					<a href="">스터디</a>
+					<a href="">택시</a>
+					<a href="">카풀</a>
+					<a href="">식사</a>
+					<a href="">헬스</a>
+				</div>
+				<div class="headerEnd">
+					<button class="headerHamburger">&#9776;</button>
+				</div>
+			</div>
+		</nav>
+		<div class="hamburgerListWrapper">	
+			<ul class="hamburgerList">
+				<li><a href="">메뉴1</a></li>
+				<li><a href="">메뉴2</a></li>
+				<li><a href="">메뉴3</a></li>
+				<li><a href="">메뉴4</a></li>
+			</ul>
+		</div>
+	</div> <!-- header end -->
+
 	<section class="login-form">
-		<h1>파피</h1>
+		<h1>Login</h1>
 		<form action="">
 			<div class="int-area">
 				<input type="text" name="id" id="id" autocomplete="off" required>
