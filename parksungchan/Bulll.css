@@ -1,80 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+
 .headerWrapper {
     z-index: 99;
 }
 
-* {
-    margin: 20px;
-    padding: 0;
-    box-sizing: border-box;
-    font-size: 18px; 
-}
-body {
-
-    /*font-family: 'Tangerine', serif;*/
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .bull-form {
-    
-    border-radius: 0; /* 테두리의 모서리를 모두 직각으로 만듭니다. */
-    border-style: solid; /* 테두리 스타일을 지정합니다. */
-    border-width: 4px; /* 테두리의 두께를 지정합니다. */
-    border-color: #7694AB; /* 테두리의 색상을 지정합니다. */
-    width: 50%; /* 너비를 설정합니다. */
-    min-width: 300px; /* 최소 너비를 설정합니다. */
-    max-width: 800px; /* 최대 너비를 설정합니다. */
-    min-height: 400px; /* 최소 높이를 설정합니다. */
-    padding: 10px; /* 내부 여백을 추가합니다. */
-    display: flex;
-    flex-direction: column; /* 요소들을 세로로 정렬합니다. */
-    justify-content: left;
-    align-items: left;
     position: fixed; /* 위치를 설정합니다. */
+    display: inline-block;
 
+    border: 1px;
+    border-radius: 15px; /* 테두리의 모서리를 모두 직각으로 만듭니다. */
+
+    left: 10vw;
+    top: 12vh;
+    width: 80vw; /* 너비를 설정합니다. */
+    height: 67vh;
+
+    background-color: rgb(235, 235, 235);
+
+    font-family: "Do Hyeon", sans-serif;
 }
+
 .form-group {
-    margin-bottom: 5px; /* 각 입력 칸 사이의 간격을 조정합니다. */
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    
+    position: fixed;
+    display: inline-block;
+    margin-bottom: 5px;
 }
 
-label {
-    font-size: 18px;
-    font-weight: bold; /* 라벨의 글자를 두껍게 만듭니다. */
-    margin-right: 5px;
-    width: 100px;
+#formTitle {
+    position: fixed;
+    display: inline-block;
+    left: 12vw;
+    top: 13vh;
+    width: 74vw;
+    height: 3vh;
+    font-size: 42pt;
+    font-weight: 400;
+}
+
+#title {
+    position: fixed;
+    display: inline-block;
+    left: 12vw;
+    top: 23.5vh;
+    width: 46vw;
+    height: 3vh;
+}
+
+#formCategory {
+    position: fixed;
+    display: inline-block;
+    left: 12vw;
+    top: 31vh;
+    font-size: 22pt;
+}
+
+#formSelectCategory {
+    position: fixed;
+    display: inline-block;
+    border: 0px;
+    left: 60vw;
+    top: 23.5vh;
+    width: 8vw;
+    height: 5.5vh;
+    font-size: 14pt;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgb(156, 156, 156);
+}
+
+#formParti {
+    position: fixed;
+    display: inline-block;
+    left: 30vw;
+    top: 31vh;
+    font-size: 22pt;
+}
+
+#participants {
+    position: fixed;
+    display: inline-block;
+    left: 68.9vw;
+    top: 23.5vh;
+    width: 7vw;
+    height: 3vh;
+    font-size: 14pt;
+}
+
+#formFile {
+    position: fixed;
+    display: inline-block;
+    left: 45.5vw;
+    top: 31vh;
+    font-size: 22pt;
+}
+
+#formFileInput {
+    position: fixed;
+    display: inline-block;
+    left: 78.3vw;
+    top: 23.5vh;
+    width: 9vw;
+    height: 5.5vh;
+    line-height: 5.5vh;
+    font-size: 22pt;
+    font-size: 12pt;
+    font-family: none;
+    text-align: center;
+    border-radius: 5px;
+    color: black;
+    background-color:#ffffff;
+    box-shadow: 1px 1px 3px rgb(156, 156, 156);
+}
+
+#file {
+    position: fixed;
+    display: none;
+    left: 50.5vw;
+    top: 31.5vh;
+    width: 5vw;
+    height: 3.5vh;
+    border: 0px;
+}
+
+#content {
+    position: fixed;
+    display: inline-block;
+    left: 12vw;
+    top: 30.5vh;
+    width: 74vw;
+    height: 42vh;
+    resize: none;
+    font-size: 14pt;
 }
 
 input[type="text"],
 input[type="number"],
-
 textarea {
     width: 100%; /* 입력 칸의 너비를 100%로 설정합니다. */
     padding: 10px; /* 내부 여백을 추가합니다. */
+    border: 0px;
+    box-shadow: 1px 1px 3px rgb(156, 156, 156);
     border-radius: 4px; /* 테두리의 모서리를 둥글게 만듭니다. */
-    border: 2px solid #a9c7dd; /* 테두리의 스타일과 색상을 지정합니다. */
     font-size: inherit; /* 부모 요소로부터 상속받은 글자 크기를 사용합니다. */
 }
 
 label[for="content"] {
     margin-top: 0; /* "내용" 라벨의 위 여백을 초기화합니다. */
     margin-right: 10px; /* 라벨과 입력 칸 사이의 간격을 조정합니다. */
-}
-
-#title{
-    width: calc(100% - 140px);
-}
-
-#content {
-    width: calc(100% - 140px); /* 입력 칸의 가로 폭을 조정합니다. */
-}
-
-#category, #participants {
-    width: calc(50% - 150px); /* 카테고리와 인원 입력 칸의 가로 폭을 조정합니다. */
 }
 
 button[type="submit"] {
