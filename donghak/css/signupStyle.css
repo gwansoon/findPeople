@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+}
+
+body {
+
+    /*font-family: 'Tangerine', serif;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signin-form {
+    border-radius: 30px;
+    margin-top: 150px;
+    border: solid 4px;
+    border-color: #7694AB; 
+    width: 70%;
+    min-width: 450px;
+    max-width: 600px;
+    min-height: 600px;
+    position: relative;
+}
+
+.signin-form h1 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 15px;
+    line-height: 80px;
+}
+
+.int-area { 
+
+
+    
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-bottom:10px;
+    position: relative;
+    
+}
+
+.int-area:first-child {margin-top: 0;}
+
+.int-area input {
+    width: 100%;
+    padding: 20px 10px 10px;
+    background-color: transparent;
+    border-radius: 20px;
+    border:2px solid #C7E2F6;
+    border-bottom: 2px solid #C7E2F6;
+    font-size: 18px; color: #1a1919;
+    outline: none; 
+    /*margin-bottom: 10px;*/
+}
+
+.int-area label {
+    
+    margin-left:3%;
+    position: absolute; left: 10px; top: 15px;
+    font-size: 18px;  color: #636363;
+    transition: top .5s ease;
+}
+
+.int-area input:focus + label,
+.int-area input:valid + label {
+    top: 5px;
+    font-size: 13px; color: #166cea;
+}
+
+.action{ 
+
+    display: flex;
+
+}
+
+.btn-area {
+    position: static;
+    margin-left: 40%;
+    margin-top: 30px;
+    width: 350px;
+    margin-bottom:10px;
+}
+.btn-area button {
+    width: 30%; height: 50px;
+    background: #7694AB;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bolder;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.memberinfo_radio{
+    /*width: 400px;
+    height: 100px;
+    padding: 20px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    */
+    display: flex;
+    align-items: center; /* 성별 입력 요소를 수직으로 정렬 */
+    justify-content: center; /* 성별 입력 요소를 가로로 중앙 정렬 */
+    margin-top: 20px; /* 위쪽 여백 추가 */
+}
+.memberinfo_radio b {
+    font-size: 18px; 
+    color: #636363;
+}
+
+
+
+
+
+
+
+.memberinfo_radio {
+    /*
+    display: flex;
+    margin-left: 25px;
+    margin-right: 25px;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    background-color: transparent;
+    border-radius: 20px;
+    border:2px solid #C7E2F6;
+    font-size: 18px; color: #1a1919;
+    width: 100%;
+    padding: 25px 10px 10px;
+    */
+    display: flex;
+    align-items: center; /* 성별 입력 요소를 수직으로 정렬 */
+    justify-content: 0;/* 성별 입력 요소를 가로로 중앙 정렬 */
+    margin-top: 9px; /* 위쪽 여백 추가 */
+    margin-left: 25px;
+    margin-right: 25px;
+    background-color: transparent;
+    border-radius: 20px;
+    border: 2px solid #C7E2F6;
+    font-size: 18px; color: #1a1919;
+    padding: 20px 20px 20px;
+    width: calc(100% - 50px);
+    
+}
+
+.Memberinfo_radio b {
+    font-size: 18px;
+    color: #636363;
+    text-align: start;
+}
+
+.memberinfo_radio span {
+    margin: 0 40px;
+}
+
+.memberinfo_radio label {
+    font-size: 18px;
+    color: #636363;
+}
