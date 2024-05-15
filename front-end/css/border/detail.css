@@ -2,7 +2,7 @@
 
 html {
     height: auto;
-    min-height: 110vh;
+    min-height: 105vh;
 }
 
 body{
@@ -108,7 +108,7 @@ body{
 }
 
 .content {
-    margin-top: 10vh;
+    margin-top: 1vh;
     margin-left: 1vw;
     margin-right: 1vw;
     font-size: 18pt;
@@ -119,8 +119,8 @@ body{
     position: fixed;
     display: inline-block;
     margin-top: 92vh;
-    margin-left: 43vw;
-    width: 14vw;
+    margin-left: 39vw;
+    width: 10vw;
     height: 6vh;
     align-content: center;
     text-align: center;
@@ -130,4 +130,21 @@ body{
     font-weight: 800;
     font-size: 21pt;
     background-color: rgb(235, 63, 63);
+}
+
+.exitBtn {
+    position: fixed;
+    display: inline-block;
+    margin-top: 92vh;
+    margin-left: 50vw;
+    width: 10vw;
+    height: 6vh;
+    align-content: center;
+    text-align: center;
+    border-radius: 13px;
+    border: 3px solid rgba(238, 238, 238, 0.825);
+    color: white;
+    font-weight: 800;
+    font-size: 21pt;
+    background-color: rgb(100, 100, 100);
 }
