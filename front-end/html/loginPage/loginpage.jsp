@@ -9,13 +9,14 @@
 	<link rel="stylesheet" href="../resources/static/css/loginpage_style.css">
 </head>
 <body>
-    <div class="headerWrapper"> <!-- header start -->
+	<div class="headerWrapper"> <!-- header start -->
 		<nav class="header">
 			<div class="headerContainer">
 				<h1 class="headerStart">
-					<a class="headerTitle" href=""> FindPeople </a>
+					<a class="headerTitle" href="">FindPeople</a>
 				</h1>
 				<div class="headerCenter">
+					<a href="">내 모임</a> <!-- 본인 글 목록 페이지로 이동 -->
 					<a href="">전체</a>
 					<a href="">비교과</a>
 					<a href="">스터디</a>
@@ -25,20 +26,23 @@
 					<a href="">헬스</a>
 				</div>
 				<div class="headerEnd">
-					<button class="headerHamburger">&#9776;</button>
+					<!-- 밑 로그인, 로그아웃은 로그인 세션 조건부로 둘 중 하나만 나오게 하기 -->
+					<c:choose>
+						<c:when test="${sessionScope.userNick == null}">
+							<a href="../loginPage/loginpage.do">
+								<button class="headerHamburger">로그인</button>
+							</a>
+						</c:when>
+					<c:otherwise>
+							<a href="../loginPage/logOut.do">	
+								<button class="headerHamburger">로그아웃</button>
+							</a>	
+						</c:otherwise>
+					</c:choose> 
 				</div>
 			</div>
 		</nav>
-		<div class="hamburgerListWrapper">	
-			<ul class="hamburgerList">
-				<li><a href="">메뉴1</a></li>
-				<li><a href="">메뉴2</a></li>
-				<li><a href="">메뉴3</a></li>
-				<li><a href="">메뉴4</a></li>
-			</ul>
-		</div>
 	</div> <!-- header end -->
-
     <section class="signin-form">
         <h1> 로그인 </h1>
         <form action="loginClick.do" method = "POST">
