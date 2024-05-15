@@ -1,0 +1,37 @@
+
+body {
+    margin: 0;
+}
+
+.centerWrapper {
+    padding-top: 40px;
+    height: 380px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #C7E2F6;
+}
+
+.centerWrapper p{
+    font-size: 30px;
+}
+
+.makeGroupWrapper {
+    position: absolute;
+    bottom: 40px;
+}
+
+.makeGroup {
+    font-family: "Noto Sans KR";
+	font-weight: 400;
+    font-size: 1rem;
+    border: solid 1.5px #7694AB;
+    border-radius: 5px;
+    background-color: #7694AB;
+    color: #fff;
+	cursor: pointer;
+    width: 100px;
+    height: 40px;
+}
