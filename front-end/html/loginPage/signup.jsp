@@ -42,17 +42,17 @@
 	</div> <!-- header end -->
     <section class="signin-form">
         <h1> 회원가입 </h1>
-        <form action>
+        <form action="userInsert.do" method = "POST">
             <div class="int-area">
                 <input type ="text" name ="userId" autocomplete="off" required>
-                <label for ="userId"> 이름</label>
+                <label for ="userId"> 아이디</label>
             </div >
             <div class="int-area">
-                <input type="text" name="userPass" autocomplete="off" required >
+                <input type="password" name="userPass" autocomplete="off" required >
                 <label for="userPass">비밀번호</label>
             </div>
             <div class="int-area">
-                <input type="text" name="userpassCheck" auticomplete="off"required >
+                <input type="password" name="userPassCheck" auticomplete="off"required >
                 <label for = "userpassCheck">비밀번호 확인</label>
             </div>
             <!--<div>-->
@@ -82,7 +82,7 @@
                 </span>
             </div>
             <div class="btn-area">
-				<button type="submit">LOGIN</button>
+				<button type="submit">가입</button>
             </div>
             
     

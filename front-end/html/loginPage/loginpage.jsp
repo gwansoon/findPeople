@@ -41,7 +41,7 @@
 
     <section class="signin-form">
         <h1> 로그인 </h1>
-        <form action>
+        <form action="loginClick.do" method = "POST">
             <div class="int-area">
                 <input type ="text" name ="userId" autocomplete="off" required>
                 <label for ="userId"> 아이디</label>
@@ -52,7 +52,7 @@
             </div>
             <div class="btn-area">
 				<button type="submit">로그인</button>
-				<a href="">회원가입</a>
+				<a href="signup.do">회원가입</a>
             </div>
             
     
