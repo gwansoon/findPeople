@@ -40,12 +40,11 @@
     <section class="bull-form">
         <div class="form-content">
             <form>
+                <h1 id="formTitle">게시글</h1>
                 <div class="form-group">
-                    <label id="formTitle" for="title" value="heloworld">제목</label>
-                    <input type="text" id="title" name="title" required>
+                    <input placeholder="제목을 입력하세요." type="text" id="title" name="title" required>
                 </div>
                 <div class="form-group">
-                    <label id="formCategory" for="category">카테고리</label>
                     <select name="category" id="formSelectCategory">
                         <option value="excurr">비교과</option>
                         <option value="study">스터디</option>
@@ -56,17 +55,14 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label id="formParti" for="participants">인원</label>
-                    <input type="number" id="participants" name="participants" min="1" value="1" required>
+                    <input placeholder="인원" type="number" id="participants" name="participants" min=none value=none required>
                 </div>
                 <div class="form-group">
-                    <label id="formFile">파일</label>
                     <label id="formFileInput" for="file">파일 선택</label>
                     <input type="file" id="file" name="file" accept="image/png, image/jpeg">
                 </div>
                 <div class="form-group">
-                    <label id="formContent" for="content">내용</label>
-                    <textarea id="content" name="content" rows="8" required></textarea>
+                    <textarea placeholder="내용을 입력하세요." id="content" name="content" rows="8" required></textarea>
                 </div>
                 <!-- <button type="submit">글쓰기</button>-->
             </form>
