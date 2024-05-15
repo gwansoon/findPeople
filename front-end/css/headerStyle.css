@@ -76,11 +76,13 @@
 .headerHamburger {
 	font-family: "Noto Sans KR";
 	font-weight: 300;
-	border: none;
+	border: solid 1.5px #C7E2F6;
+	border-radius: 5px;
 	background-color: transparent;
 	font-size: 1rem;
 	color: #fff;
 	cursor: pointer;
-	width: 56px;
+	width: 60px;
+	height: 30px;
 	margin-left: 10px;
 }
