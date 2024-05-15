@@ -1,29 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@500&family=Noto+Sans+KR:wght@100..900&display=swap');
+
+html {
+    height: auto;
+    min-height: 110vh;
+}
+
+body{
+    -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    font-family: "Noto Sans KR", sans-serif;
+}
+
 .headerWrapper {
     z-index: 99;
 }
 
-#navLogo {
+.navLogo {
     margin-left: 1vw;
     font-size: 25pt;
     font-weight: 600;
     transform: translate(0, -10%);
 }
 
-#navIcon {
+.navIcon {
     margin-right: 2vw;
     margin-left: auto;
 }
 
-#detailBox {
+.detailBox {
     position: absolute;
-    height: 150vh;
+    min-height: 88.5vh;
+    max-height: auto;
+    overflow: auto;
     width: 45vw;
     margin-top: 7vh;
     translate: 60% 0;
-    background-color: rgb(235, 235, 235)
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    background-color: #d0d9e0;
 }
 
-#imgBox {
+.imgBox {
     position: fixed;
     display: inline-block;
     width: 43vw;
@@ -34,58 +57,77 @@
     background-color: rgb(251, 243, 255);
 }
 
-#titleBox {
+.titleBox {
     position: fixed;
     display: inline-block;
     width: 38vw;
-    height: 13vh;
-    margin-top: 32vh;
+    height: 8vh;
+    margin-top: 35.5vh;
     margin-left: 3.5vw;
     border-radius: 20px;
     text-align: center;
     background-color: white;
 }
 
-#head {
-    margin-top: 1vh;
-    font-size: 18pt;
-}
-
-#title {
+.title {
+    margin-top: 0.8vh;
     font-size: 28pt;
     font-weight: 700;
 }
 
-#category, #member {
+.category, #member {
     position: fixed;
     font-weight: 300;
     margin-left: 20px;
 }
 
-#contentBox {
+.contentBox {
     position: fixed;
     display: inline-block;
-    margin-top: 47vh;
-    width: 45vw;
-    height: 103vh;
+    margin-top: 45.5vh;
+    margin-left: 1vw;
+    margin-bottom: 1vh;
+    width: 43vw;
+    height: auto;
+    min-height: 40vh;
+    padding-bottom: 1vh;
+    border-radius: 15px;
+    background-color: white;
 }
 
-#category {
+.category {
     margin-top: 2vh;
     margin-left: 1vw;
     font-size: 18pt;
 }
 
-#member {
+.member {
     margin-top: 5.5vh;
     margin-left: 1vw;
     font-size: 15pt;
 }
 
-#content {
+.content {
     margin-top: 10vh;
     margin-left: 1vw;
     margin-right: 1vw;
     font-size: 18pt;
     font-weight: 500;
+}
+
+.joinBtn {
+    position: fixed;
+    display: inline-block;
+    margin-top: 92vh;
+    margin-left: 43vw;
+    width: 14vw;
+    height: 6vh;
+    align-content: center;
+    text-align: center;
+    border-radius: 13px;
+    border: 3px solid rgba(238, 238, 238, 0.825);
+    color: white;
+    font-weight: 800;
+    font-size: 21pt;
+    background-color: rgb(235, 63, 63);
 }
