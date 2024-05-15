@@ -28,21 +28,16 @@
 					<a href="">헬스</a>
 				</div>
 				<div class="headerEnd">
-					<button class="headerHamburger">&#9776;</button>
+					<!-- 밑 로그인, 로그아웃은 로그인 세션 조건부로 둘 중 하나만 나오게 하기 -->
+					<button class="headerHamburger">로그인</button>
+					<!-- <button class="headerHamburger">로그아웃</button> -->
 				</div>
 			</div>
 		</nav>
-		<div class="hamburgerListWrapper">	
-			<ul class="hamburgerList">
-				<li><a href="">메뉴1</a></li>
-				<li><a href="">메뉴2</a></li>
-				<li><a href="">메뉴3</a></li>
-				<li><a href="">메뉴4</a></li>
-			</ul>
-		</div>
 	</div> <!-- header end -->
 	
 	<div class="centerWrapper">
+		<h2>${sessionScope.userNick}님이</h2> <!-- [닉네임] 부분은 jsp로 넣어주기-->
 		<h2>들어갈 수 있는 모임 수</h2>
 		<p>00</p> <!-- 관순햄 전체 모임 개수 표시해주세요 -->
 	</div>
