@@ -5,7 +5,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="../resources/static/css/main.css">
+	<link rel="stylesheet" href="../resources/static/css/mainStyle.css">
 	<link rel="stylesheet" href="../resources/static/css/group.css">
 	<link rel="stylesheet" href="../resources/static/css/headerStyle.css">
 	<script src="https://kit.fontawesome.com/05d1420fac.js" crossorigin="anonymous"></script>
@@ -29,17 +29,40 @@
 				</div>
 				<div class="headerEnd">
 					<!-- 밑 로그인, 로그아웃은 로그인 세션 조건부로 둘 중 하나만 나오게 하기 -->
-					<button class="headerHamburger">로그인</button>
-					<!-- <button class="headerHamburger">로그아웃</button> -->
+					<c:choose>
+						<c:when test="${sessionScope.userNick == null}">
+							<a href="../loginPage/loginpage.do">
+								<button class="headerHamburger">로그인</button>
+							</a>
+						</c:when>
+					<c:otherwise>
+							<a href="../loginPage/logOut.do">	
+								<button class="headerHamburger">로그아웃</button>
+							</a>	
+						</c:otherwise>
+					</c:choose> 
+	
 				</div>
 			</div>
 		</nav>
 	</div> <!-- header end -->
 	
 	<div class="centerWrapper">
-		<h2>${sessionScope.userNick}님이</h2> <!-- [닉네임] 부분은 jsp로 넣어주기-->
+	
+		<c:choose>
+			<c:when test="${sessionScope.userNick == null}">
+				<h2>FindPeple에 가입하면</h2>
+			</c:when>
+			<c:otherwise>
+				<div >
+					<h1 style="display:inline;">${sessionScope.userNick} </h1>
+					<h2 style="display:inline;">님이</h2>
+				</div> 
+			</c:otherwise>
+		</c:choose> 
+		
 		<h2>들어갈 수 있는 모임 수</h2>
-		<p>00</p> <!-- 관순햄 전체 모임 개수 표시해주세요 -->
+		<p>- 00 -</p> <!-- 관순햄 전체 모임 개수 표시해주세요 -->
 	</div>
 	<div class="contentWrapper">
 		<ul class="content">
@@ -59,6 +82,6 @@
 		</ul>
 	</div>
 	<!-- js -->
-	<script src="../js/header.js"></script>
+	<!-- <script src="../js/header.js"></script> -->
 </body>
 </html>
