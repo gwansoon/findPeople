@@ -12,9 +12,10 @@
 		<nav class="header">
 			<div class="headerContainer">
 				<h1 class="headerStart">
-					<a class="headerTitle" href="">workSpace</a>
+					<a class="headerTitle" href="">FindPeople</a>
 				</h1>
 				<div class="headerCenter">
+					<a href="">내 모임</a> <!-- 본인 글 목록 페이지로 이동 -->
 					<a href="">전체</a>
 					<a href="">비교과</a>
 					<a href="">스터디</a>
@@ -24,18 +25,22 @@
 					<a href="">헬스</a>
 				</div>
 				<div class="headerEnd">
-					<button class="headerHamburger">&#9776;</button>
+					<!-- 밑 로그인, 로그아웃은 로그인 세션 조건부로 둘 중 하나만 나오게 하기 -->
+					<c:choose>
+						<c:when test="${sessionScope.userNick == null}">
+							<a href="../loginPage/loginpage.do">
+								<button class="headerHamburger">로그인</button>
+							</a>
+						</c:when>
+					<c:otherwise>
+							<a href="../loginPage/logOut.do">	
+								<button class="headerHamburger">로그아웃</button>
+							</a>	
+						</c:otherwise>
+					</c:choose> 
 				</div>
 			</div>
 		</nav>
-		<div class="hamburgerListWrapper">	
-			<ul class="hamburgerList">
-				<li><a href="">메뉴1</a></li>
-				<li><a href="">메뉴2</a></li>
-				<li><a href="">메뉴3</a></li>
-				<li><a href="">메뉴4</a></li>
-			</ul>
-		</div>
 	</div> <!-- header end -->
     <section class="bull-form">
         <div class="form-content">
@@ -45,7 +50,11 @@
                     <input placeholder="제목을 입력하세요." type="text" id="title" name="title" required>
                 </div>
                 <div class="form-group">
+                    <input placeholder="시간을 입력하세요. ex) 매주 목요일 10시" type="text" id="time" name="time" required>
+                </div>
+                <div class="form-group">
                     <select name="category" id="formSelectCategory">
+                        <option value="none" hidden>카테고리</option>
                         <option value="excurr">비교과</option>
                         <option value="study">스터디</option>
                         <option value="taxi">택시</option>
@@ -55,11 +64,7 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <input placeholder="인원" type="number" id="participants" name="participants" min=none value=none required>
-                </div>
-                <div class="form-group">
-                    <label id="formFileInput" for="file">파일 선택</label>
-                    <input type="file" id="file" name="file" accept="image/png, image/jpeg">
+                    <input placeholder="인원" type="number" id="participants" name="participants" min=1 required>
                 </div>
                 <div class="form-group">
                     <textarea placeholder="내용을 입력하세요." id="content" name="content" rows="8" required></textarea>
