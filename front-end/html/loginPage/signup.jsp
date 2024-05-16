@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../resources/static/css/signupStyle.css">
 </head>
 <body>
-    <div class="headerWrapper"> <!-- header start -->
+	<div class="headerWrapper"> <!-- header start -->
 		<nav class="header">
 			<div class="headerContainer">
 				<h1 class="headerStart">

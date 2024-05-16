@@ -45,7 +45,8 @@
 				</div>
 			</div>
 		</nav>
-	</div> <!-- header end -->	
+	</div> <!-- header end -->
+	
 	<div class="centerWrapper">
 		<c:choose>
 			<c:when test="${sessionScope.userNick == null}">
@@ -61,7 +62,9 @@
 		<h2>들어갈 수 있는 모임 수</h2>
 		<p>- 00 -</p> <!-- 관순햄 전체 모임 개수 표시해주세요 -->
 		<div class="makeGroupWrapper">
-			<button class="makeGroup">모임 만들기</button>
+			<a href="../mainPage/bulletin.do">
+				<button class="makeGroup">모임 만들기</button>
+			</a>
 		</div>
 	</div>
 	<div class="contentWrapper">

@@ -19,6 +19,7 @@
 					<a class="headerTitle" href="">FindPeople</a>
 				</h1>
 				<div class="headerCenter">
+					<a href="">내 모임</a> <!-- 본인 글 목록 페이지로 이동 -->
 					<a href="">전체</a>
 					<a href="">비교과</a>
 					<a href="">스터디</a>
