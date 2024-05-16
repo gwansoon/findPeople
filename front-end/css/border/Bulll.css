@@ -15,7 +15,7 @@
     left: 10vw;
     top: 12vh;
     width: 80vw; /* 너비를 설정합니다. */
-    height: 70vh;
+    height: 75vh;
 
     background-color: rgb(235, 235, 235);
 }
@@ -117,25 +117,32 @@ label[for="content"] {
     margin-right: 10px; /* 라벨과 입력 칸 사이의 간격을 조정합니다. */
 }
 
-button[type="submit"] {
-    padding: 10px 20px; /* 버튼의 내부 여백을 조정합니다. */
-    border: none; /* 테두리를 없앱니다. */
-    border-radius: 4px; /* 테두리의 모서리를 둥글게 만듭니다. */
-    background-color: #7694AB; /* 배경색을 지정합니다. */
-    color: white; /* 글자색을 지정합니다. */
-    cursor: pointer; /* 마우스 커서를 포인터로 변경합니다. */
-    font-size: inherit; /* 부모 요소로부터 상속받은 글자 크기를 사용합니다. */
-    display: inline-block; 
-    
-}
-button[type="submit"] {
-    position: relative;
-    right: -350px; /* 오른쪽으로 10px 이동 */
-}
-
-
-
-button[type="submit"]:hover {
-    background-color: #576D88; /* 버튼 위에 마우스를 올렸을 때의 배경색을 지정합니다. */
+.submit {
+    position: fixed;
+    display: inline-block;
+    margin-top: 68vh;
+    margin-left: 31vw;
+    width: 7vw;
+    height: 5vh;
+    border: none;
+    border-radius: 7px;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 14pt;
+    font-weight: 500;
+    background-color: #a4bfd3;
 }
 
+.cancel {
+    position: fixed;
+    display: inline-block;
+    margin-top: 68vh;
+    margin-left: 39vw;
+    width: 7vw;
+    height: 5vh;
+    border: none;
+    border-radius: 7px;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 14pt;
+    font-weight: 500;
+    background-color: rgb(132, 132, 132);
+}
