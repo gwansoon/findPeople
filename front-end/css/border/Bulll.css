@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Briem+Hand:wght@100..900&family=IBM+Plex+Sans+KR:wght@500&family=Noto+Sans+KR:wght@100..900&display=swap');
 
 .headerWrapper {
     z-index: 99;
@@ -14,11 +15,9 @@
     left: 10vw;
     top: 12vh;
     width: 80vw; /* 너비를 설정합니다. */
-    height: 67vh;
+    height: 70vh;
 
     background-color: rgb(235, 235, 235);
-
-    font-family: "Do Hyeon", sans-serif;
 }
 
 .form-group {
@@ -36,101 +35,70 @@
     height: 3vh;
     font-size: 42pt;
     font-weight: 400;
+    font-family: "Do Hyeon", sans-serif;
 }
 
 #title {
     position: fixed;
     display: inline-block;
     left: 12vw;
-    top: 23.5vh;
-    width: 46vw;
+    top: 21.5vh;
+    width: 74vw;
     height: 3vh;
+    font-size: 16pt;
+    font-family: "Do Hyeon", sans-serif;
 }
 
-#formCategory {
+#time {
     position: fixed;
     display: inline-block;
     left: 12vw;
-    top: 31vh;
-    font-size: 22pt;
+    top: 27.5vh;
+    width: 56.7vw;
+    height: 3vh;
+    font-size: 12pt;
+    font-weight: 400;
+    font-family: "Noto Sans KR", sans-serif;
 }
 
 #formSelectCategory {
     position: fixed;
     display: inline-block;
     border: 0px;
-    left: 60vw;
-    top: 23.5vh;
+    left: 70.5vw;
+    top: 27.5vh;
     width: 8vw;
     height: 5.5vh;
-    font-size: 14pt;
+    font-size: 12pt;
     border-radius: 5px;
+    text-align: center;
     box-shadow: 1px 1px 3px rgb(156, 156, 156);
-}
-
-#formParti {
-    position: fixed;
-    display: inline-block;
-    left: 30vw;
-    top: 31vh;
-    font-size: 22pt;
+    font-family: "Noto Sans KR", sans-serif;
 }
 
 #participants {
     position: fixed;
     display: inline-block;
-    left: 68.9vw;
-    top: 23.5vh;
+    left: 78.9vw;
+    top: 27.5vh;
     width: 7vw;
     height: 3vh;
-    font-size: 14pt;
-}
-
-#formFile {
-    position: fixed;
-    display: inline-block;
-    left: 45.5vw;
-    top: 31vh;
-    font-size: 22pt;
-}
-
-#formFileInput {
-    position: fixed;
-    display: inline-block;
-    left: 78.3vw;
-    top: 23.5vh;
-    width: 9vw;
-    height: 5.5vh;
-    line-height: 5.5vh;
-    font-size: 22pt;
     font-size: 12pt;
-    font-family: none;
-    text-align: center;
-    border-radius: 5px;
-    color: black;
-    background-color:#ffffff;
-    box-shadow: 1px 1px 3px rgb(156, 156, 156);
-}
-
-#file {
-    position: fixed;
-    display: none;
-    left: 50.5vw;
-    top: 31.5vh;
-    width: 5vw;
-    height: 3.5vh;
-    border: 0px;
+    font-weight: 400;
+    font-family: "Noto Sans KR", sans-serif;
 }
 
 #content {
     position: fixed;
     display: inline-block;
     left: 12vw;
-    top: 30.5vh;
+    top: 33.5vh;
     width: 74vw;
     height: 42vh;
     resize: none;
-    font-size: 14pt;
+    font-weight: 400;
+    font-size: 12pt;
+    font-family: "Noto Sans KR", sans-serif;
 }
 
 input[type="text"],
