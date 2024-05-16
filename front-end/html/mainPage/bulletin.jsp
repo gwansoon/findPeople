@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../resources/static/css/Bulll.css">
+    <link rel="stylesheet" href="../resources/static/css/mainPage/Bulll.css">
     <link rel="stylesheet" href="../resources/static/css/headerStyle.css">
     <title>Blue Border</title>
 </head>
@@ -50,20 +50,20 @@
             <form action="insertBull.do" metod="POST">
                 <h1 id="formTitle">게시글</h1>
                 <div class="form-group">
-                    <input placeholder="제목을 입력하세요." type="text" id="title" name="title" required>
+                    <input placeholder="제목을 입력하세요." type="text" id="title" name="bullTitle" required>
                 </div>
                 <div class="form-group">
                     <input placeholder="시간을 입력하세요. ex) 매주 목요일 10시" type="text" id="time" name="time" required>
                 </div>
                 <div class="form-group">
-                    <select name="category" id="formSelectCategory">
+                    <select name="categories_ID" id="formSelectCategory">
                         <option value="none" hidden>카테고리</option>
-                        <option value="excurr">비교과</option>
-                        <option value="study">스터디</option>
-                        <option value="taxi">택시</option>
-                        <option value="car">카풀</option>
-                        <option value="meal">식사</option>
-                        <option value="exer">헬스</option>
+                        <option value=1>비교과</option>
+                        <option value=2>스터디</option>
+                        <option value=3>택시</option>
+                        <option value=4>카풀</option>
+                        <option value=5>식사</option>
+                        <option value=6>헬스</option>
                     </select>
                 </div>
                 <div class="form-group">

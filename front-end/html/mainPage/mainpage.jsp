@@ -69,19 +69,23 @@
 	</div>
 	<div class="contentWrapper">
 		<ul class="content">
+			<!-- 반복문 시작 -->
+			<c:forEach items="${bullList}" var="bulletin">
 			<li>
-				<a href="" class="groupHref">
+				<a href="" class="groupHref"> <!-- 디테일들어가는 경로 -->
 					<div class="groupLeft">사진</div>
 					<div class="groupRight">
-						<div class="groupCategory">스터디</div>
-						<div class="groupSubject">컴퓨터구조론 스터디원 급구</div>
+						<div class="groupCategory">${bulletin.categories_Title }</div>
+						<div class="groupSubject">${bulletin.bullTitle }</div>
 						<div class="groupBottomWrapper">
 							<div class="groupDate">매주 목요일 10시</div>
-							<div class="groupMember">3/5</div>
+							<div class="groupMember">3/${bulletin.participants } </div>
 						</div>
 					</div>
 				</a>
 			</li>
+			</c:forEach>
+			<!-- 반복문 끝 -->
 		</ul>
 	</div>
 </body>
