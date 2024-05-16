@@ -19,7 +19,6 @@
 					<a class="headerTitle" href="">FindPeople</a>
 				</h1>
 				<div class="headerCenter">
-					<a href="">내 모임</a> <!-- 본인 글 목록 페이지로 이동 -->
 					<a href="">전체</a>
 					<a href="">비교과</a>
 					<a href="">스터디</a>
@@ -32,14 +31,10 @@
 					<!-- 밑 로그인, 로그아웃은 로그인 세션 조건부로 둘 중 하나만 나오게 하기 -->
 					<c:choose>
 						<c:when test="${sessionScope.userNick == null}">
-							<a href="../loginPage/loginpage.do">
-								<button class="headerHamburger">로그인</button>
-							</a>
+							<a class="headerHamburger" href="../loginPage/loginpage.do">로그인</a>
 						</c:when>
-					<c:otherwise>
-							<a href="../loginPage/logOut.do">	
-								<button class="headerHamburger">로그아웃</button>
-							</a>	
+						<c:otherwise>
+							<a class="headerHamburger" href="../loginPage/logOut.do">로그아웃</a>	
 						</c:otherwise>
 					</c:choose> 
 				</div>
@@ -53,7 +48,7 @@
 				<h2>FindPeple에 가입하면</h2>
 			</c:when>
 			<c:otherwise>
-				<div >
+				<div class="centerTextCenter" >
 					<h1 style="display:inline;">${sessionScope.userNick} </h1>
 					<h2 style="display:inline;">님이</h2>
 				</div> 
@@ -61,11 +56,14 @@
 		</c:choose> 
 		<h2>들어갈 수 있는 모임 수</h2>
 		<p>- 00 -</p> <!-- 관순햄 전체 모임 개수 표시해주세요 -->
-		<div class="makeGroupWrapper">
+		<div class="centerButtonWrapper"> <!-- 로그인/로그아웃 조건부 출력-->
 			<a href="../mainPage/bulletin.do">
-				<button class="makeGroup">모임 만들기</button>
+				<button class="centerButton makeGroupButton">모임 만들기</button>
 			</a>
-		</div>
+			<a  href="">
+				<button class="centerButton myGroupButton">내 모임</button>
+			</a>
+		</div > <!-- 로그인/로그아웃 조건부 출력-->
 	</div>
 	<div class="contentWrapper">
 		<ul class="content">
@@ -73,13 +71,12 @@
 			<c:forEach items="${bullList}" var="bulletin">
 			<li>
 				<a href="" class="groupHref"> <!-- 디테일들어가는 경로 -->
-					<div class="groupLeft">사진</div>
+					<div class="groupLeft">${bulletin.categories_Title }</div>
 					<div class="groupRight">
-						<div class="groupCategory">${bulletin.categories_Title }</div>
 						<div class="groupSubject">${bulletin.bullTitle }</div>
 						<div class="groupBottomWrapper">
 							<div class="groupDate">매주 목요일 10시</div>
-							<div class="groupMember">3/${bulletin.participants } </div>
+							<div class="groupMember">3/${bulletin.participants }</div>
 						</div>
 					</div>
 				</a>
