@@ -18,7 +18,6 @@ body{
 }
 
 .detailBox {
-    border: 1px solid black;
     position: absolute;
     min-height: 88.5vh;
     max-height: auto;
@@ -32,47 +31,34 @@ body{
     background-color: #d0d9e0;
 }
 
-.imgBox {
-    position: fixed;
-    display: inline-block;
-    width: 43vw;
-    height: 38vh;
-    margin-top: 1vw;
-    margin-left: 1vw;
-    border-radius: 15px;
-    background-color: rgb(251, 243, 255);
-}
-
 .titleBox {
-    border: 1px solid black;
-    position: fixed;
+    position: absolute;
     display: inline-block;
     width: 38vw;
-    height: 8vh;
-    margin-top: 35.5vh;
+    height: 7vh;
+    margin-top: 3vh;
     margin-left: 3.5vw;
     border-radius: 20px;
+    padding-top: 1.5vh;
     text-align: center;
+    align-items: center;
     background-color: white;
 }
 
 .title {
+    display: inline-block;
     font-family: "Noto Sans KR", sans-serif;
-    margin-top: 0.8vh;
-    font-size: 28pt;
+    margin-top: 0.3vh;
+    font-size: 19.5pt;
     font-weight: 700;
-}
-
-.category, #member {
-    position: fixed;
-    font-weight: 300;
-    margin-left: 20px;
+    width: 34vw;
+    height: 7vh;
 }
 
 .contentBox {
-    position: fixed;
+    position: absolute;
     display: inline-block;
-    margin-top: 45.5vh;
+    margin-top: 13.5vh;
     margin-left: 1vw;
     margin-bottom: 1vh;
     width: 43vw;
@@ -80,31 +66,44 @@ body{
     min-height: 40vh;
     margin-bottom: 1vh;
     border-radius: 15px;
-    border: 1px solid black;
     background-color: white;
 }
 
 .category {
     font-family: "Noto Sans KR", sans-serif;
-    font-weight: 400;
+    position: fixed;
+    font-weight: 300;
     margin-top: 2vh;
     margin-left: 1vw;
-    font-size: 18pt;
+    font-size: 15pt;
+    width: 25vw;
+    border-bottom: 1px solid black;
 }
 
 .member {
     font-family: "Noto Sans KR", sans-serif;
-    margin-top: 5.5vh;
-    margin-left: 1vw;
+    position: fixed;
+    font-weight: 300;
+    margin-top: 2vh;
+    margin-left: 7vw;
+    font-size: 15pt;
+}
+
+.time {
+    font-family: "Noto Sans KR", sans-serif;
+    position: fixed;
+    font-weight: 300;
+    margin-top: 2vh;
+    margin-left: 14vw;
     font-size: 15pt;
 }
 
 .content {
     font-family: "Noto Sans KR", sans-serif;
-    margin-top: 1vh;
+    margin-top: 7.5vh;
     margin-left: 1vw;
     margin-right: 1vw;
-    font-size: 18pt;
+    font-size: 17pt;
     font-weight: 400;
     word-break: break-all;
 }
@@ -120,11 +119,12 @@ body{
     height: 6vh;
     align-content: center;
     text-align: center;
+    border: none;
     border-radius: 13px;
     color: white;
     font-weight: 800;
     font-size: 20pt;
-    background-color: rgb(235, 63, 63);
+    background-color: rgb(193, 154, 154);
 }
 
 .exitBtn {
@@ -137,11 +137,12 @@ body{
     height: 6vh;
     align-content: center;
     text-align: center;
+    border: none;
     border-radius: 13px;
     color: white;
     font-weight: 800;
     font-size: 20pt;
-    background-color: rgb(100, 100, 100);
+    background-color: rgb(186, 186, 186);
 }
 
 .commentGrid {
@@ -152,7 +153,6 @@ body{
     width: 45vw;
     min-height: 20vh;
     background-color: rgb(255, 255, 255);
-    border: 1px solid black;
     background-color: #d0d9e0;
     border-radius: 15px;
 }
@@ -172,7 +172,6 @@ body{
     width: 43vw;
     height: auto;
     min-height: 12vh;
-    border: 1px solid black;
     border-radius: 15px;
     background-color: white;
 }
@@ -197,5 +196,4 @@ body{
     font-weight: 400;
     margin: 0.5vw 1vw 0 1.5vw;
     word-break: break-all;
-    background-color: rgba(100, 100, 100, 0.216);
 }

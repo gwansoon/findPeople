@@ -32,15 +32,14 @@ body{
 }
 
 .titleBox {
-    position: fixed;
+    position: absolute;
     display: inline-block;
     width: 38vw;
-    min-height: 6vh;
-    max-height: 12vh;
+    height: 7vh;
     margin-top: 3vh;
     margin-left: 3.5vw;
     border-radius: 20px;
-    padding-bottom: 1vh;
+    padding-top: 1.5vh;
     text-align: center;
     align-items: center;
     background-color: white;
@@ -50,15 +49,16 @@ body{
     display: inline-block;
     font-family: "Noto Sans KR", sans-serif;
     margin-top: 0.3vh;
-    font-size: 26pt;
+    font-size: 19.5pt;
     font-weight: 700;
     width: 34vw;
     height: 7vh;
 }
 
 .contentBox {
+    position: absolute;
     display: inline-block;
-    margin-top: 20vh;
+    margin-top: 13.5vh;
     margin-left: 1vw;
     margin-bottom: 1vh;
     width: 43vw;
@@ -73,29 +73,37 @@ body{
     font-family: "Noto Sans KR", sans-serif;
     position: fixed;
     font-weight: 300;
-    margin-left: 20px;
-    font-weight: 400;
-    margin-top: 1vh;
+    margin-top: 2vh;
     margin-left: 1vw;
-    font-size: 18pt;
+    font-size: 15pt;
+    width: 25vw;
+    border-bottom: 1px solid black;
 }
 
 .member {
     font-family: "Noto Sans KR", sans-serif;
     position: fixed;
     font-weight: 300;
-    margin-left: 20px;
-    margin-top: 4.7vh;
-    margin-left: 1vw;
+    margin-top: 2vh;
+    margin-left: 7vw;
+    font-size: 15pt;
+}
+
+.time {
+    font-family: "Noto Sans KR", sans-serif;
+    position: fixed;
+    font-weight: 300;
+    margin-top: 2vh;
+    margin-left: 14vw;
     font-size: 15pt;
 }
 
 .content {
     font-family: "Noto Sans KR", sans-serif;
-    margin-top: 8.5vh;
+    margin-top: 7.5vh;
     margin-left: 1vw;
     margin-right: 1vw;
-    font-size: 18pt;
+    font-size: 17pt;
     font-weight: 400;
     word-break: break-all;
 }
@@ -116,7 +124,7 @@ body{
     color: white;
     font-weight: 800;
     font-size: 20pt;
-    background-color: rgb(213, 140, 140);
+    background-color: rgb(193, 154, 154);
 }
 
 .exitBtn {
