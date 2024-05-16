@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,7 +47,7 @@
 	</div> <!-- header end -->
     <section class="bull-form">
         <div class="form-content">
-            <form>
+            <form action="insertBull.do" metod="POST">
                 <h1 id="formTitle">게시글</h1>
                 <div class="form-group">
                     <input placeholder="제목을 입력하세요." type="text" id="title" name="title" required>
@@ -71,7 +72,9 @@
                 <div class="form-group">
                     <textarea placeholder="내용을 입력하세요." id="content" name="content" rows="8" required></textarea>
                 </div>
-                <!-- <button type="submit">글쓰기</button>-->
+                <input type="hidden" name="userId" value="${sessionScope.userNick}">
+                <button type="submit" class="submit">글쓰기</button>
+                <button type="button" class="cancel">취소</button>
             </form>
         </div>
         
