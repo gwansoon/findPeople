@@ -41,14 +41,12 @@
 							</a>	
 						</c:otherwise>
 					</c:choose> 
-	
 				</div>
 			</div>
 		</nav>
 	</div> <!-- header end -->
 	
 	<div class="centerWrapper">
-	
 		<c:choose>
 			<c:when test="${sessionScope.userNick == null}">
 				<h2>FindPeple에 가입하면</h2>
@@ -60,9 +58,13 @@
 				</div> 
 			</c:otherwise>
 		</c:choose> 
-		
 		<h2>들어갈 수 있는 모임 수</h2>
 		<p>- 00 -</p> <!-- 관순햄 전체 모임 개수 표시해주세요 -->
+		<div class="makeGroupWrapper">
+			<a href="../mainPage/bulletin.do">
+				<button class="makeGroup">모임 만들기</button>
+			</a>
+		</div>
 	</div>
 	<div class="contentWrapper">
 		<ul class="content">
@@ -81,7 +83,5 @@
 			</li>
 		</ul>
 	</div>
-	<!-- js -->
-	<!-- <script src="../js/header.js"></script> -->
 </body>
 </html>
