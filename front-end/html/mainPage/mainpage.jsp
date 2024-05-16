@@ -5,8 +5,8 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="../resources/static/css/mainStyle.css">
-	<link rel="stylesheet" href="../resources/static/css/group.css">
+	<link rel="stylesheet" href="../resources/static/css/mainPage/mainStyle.css">
+	<link rel="stylesheet" href="../resources/static/css/mainPage/group.css">
 	<link rel="stylesheet" href="../resources/static/css/headerStyle.css">
 	<script src="https://kit.fontawesome.com/05d1420fac.js" crossorigin="anonymous"></script>
 	<title>FindPeople</title>
@@ -55,15 +55,21 @@
 			</c:otherwise>
 		</c:choose> 
 		<h2>들어갈 수 있는 모임 수</h2>
-		<p>- 00 -</p> <!-- 관순햄 전체 모임 개수 표시해주세요 -->
+		<p>- ${bullCount} -</p> <!-- 관순햄 전체 모임 개수 표시해주세요 -->
 		<div class="centerButtonWrapper"> <!-- 로그인/로그아웃 조건부 출력-->
-			<a href="../mainPage/bulletin.do">
-				<button class="centerButton makeGroupButton">모임 만들기</button>
-			</a>
-			<a  href="">
-				<button class="centerButton myGroupButton">내 모임</button>
-			</a>
+			<c:choose>
+				<c:when test="${sessionScope.userNick != null}">
+					<a href="../mainPage/bulletin.do">
+						<button class="centerButton makeGroupButton">모임 만들기</button>
+					</a>
+					<a  href="">
+						<button class="centerButton myGroupButton">내 모임</button>
+					</a>
+				</c:when>
+	
+			</c:choose>
 		</div > <!-- 로그인/로그아웃 조건부 출력-->
+		
 	</div>
 	<div class="contentWrapper">
 		<ul class="content">
