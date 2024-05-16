@@ -43,6 +43,7 @@
 			</div>
 		</nav>
 	</div> <!-- header end -->
+
     <section class="signin-form">
         <h1> 로그인 </h1>
         <form action="loginClick.do" method = "POST">
@@ -51,7 +52,7 @@
                 <label for ="userId"> 아이디</label>
             </div >
             <div class="int-area">
-                <input type="text" name="userPass" autocomplete="off" required >
+                <input type="password" name="userPass" autocomplete="off" required >
                 <label for="userPass">비밀번호</label>
             </div>
             <div class="btn-area">
