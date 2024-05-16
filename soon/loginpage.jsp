@@ -47,7 +47,7 @@
                 <label for ="userId"> 아이디</label>
             </div >
             <div class="int-area">
-                <input type="text" name="userPass" autocomplete="off" required >
+                <input type="password" name="userPass" autocomplete="off" required >
                 <label for="userPass">비밀번호</label>
             </div>
             <div class="btn-area">
