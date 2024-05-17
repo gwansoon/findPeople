@@ -76,12 +76,13 @@
 			<!-- 반복문 시작 -->
 			<c:forEach items="${bullList}" var="bulletin">
 			<li>
-				<a href="" class="groupHref"> <!-- 디테일들어가는 경로 -->
-					<div class="groupLeft">${bulletin.categories_Title }</div>
+			 <%-- ${bulletin.bullSEQ} --%>
+				<a href="getBullDetail.do?bullSEQ=${bulletin.bullSEQ}" class="groupHref"> <!-- 디테일들어가는 경로 -->
+					<div class="groupLeft">${bulletin.categories_Title } </div>
 					<div class="groupRight">
 						<div class="groupSubject">${bulletin.bullTitle }</div>
 						<div class="groupBottomWrapper">
-							<div class="groupDate">매주 목요일 10시</div>
+							<div class="groupDate">${bulletin.bullTime}</div>
 							<div class="groupMember">3/${bulletin.participants }</div>
 						</div>
 					</div>

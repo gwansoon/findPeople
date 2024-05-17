@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../resources/static/css/mainPage/detail.css">
-    <link rel="stylesheet" href="../resources/static/css/mainPage/headerStyle.css">
+    <link rel="stylesheet" href="../resources/static/css/headerStyle.css">
     <title>Detail</title>
 </head>
 <body>
@@ -15,7 +15,7 @@
 		<nav class="header">
 			<div class="headerContainer">
 				<h1 class="headerStart">
-					<a class="headerTitle" href="">FindPeople</a>
+					<a class="headerTitle" href="mainpage.do">FindPeople</a>
 				</h1>
 				<div class="headerCenter">
 					<a href="">내 모임</a> <!-- 본인 글 목록 페이지로 이동 -->
@@ -48,13 +48,13 @@
 	
     <div class="detailBox">
         <div class="titleBox">
-            <div class="title" id="bullTitle">가나다라마바사아자차카타파하가나다라마바</div>
+            <div class="title" id="bullTitle">${bullDetail.bullTitle}</div>
         </div>
         <div class="contentBox">
-            <div class="category" id="categories_ID">카테고리</div>
-            <div class="member" id="participants">현원/총원</div>
-			<div class="time" id="bullTime">매주 목요일 10시</div>
-            <div class="content" id="content">내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용</div>
+            <div class="category" id="categories_ID">카테고리 : ${bullDetail.categories_Title}</div>
+            <div class="member" id="participants">인원 : 현원/${bullDetail.participants}</div>
+			<div class="time" id="bullTime">일정 : ${bullDetail.bullTime}</div>
+            <div class="content" id="content">${bullDetail.content}</div>
         </div>
     </div>
 	<div class="joinMemList">
@@ -62,7 +62,7 @@
 		<div class="joinMemBox">
 			<table>
 				<tr class="hang"> <!--이부분 반복-->
-					<td class="memName" id="usernick">박건호</td>
+					<td class="memName" id="usernick">${bullDetail.userNick}</td>
 					<td>
 						<a href="#" class="kick" onlick=none>x</a>
 					</td>
