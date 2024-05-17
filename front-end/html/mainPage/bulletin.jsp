@@ -53,7 +53,7 @@
                     <input placeholder="제목을 입력하세요." type="text" id="title" name="bullTitle" required>
                 </div>
                 <div class="form-group">
-                    <input placeholder="시간을 입력하세요. ex) 매주 목요일 10시" type="text" id="time" name="time" required>
+                    <input placeholder="시간을 입력하세요. ex) 매주 목요일 10시" type="text" id="time" name="bullTime" required>
                 </div>
                 <div class="form-group">
                     <select name="categories_ID" id="formSelectCategory">
@@ -67,12 +67,13 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <input placeholder="인원" type="number" id="participants" name="participants" min=1 required>
+                    <input placeholder="인원" type="number" id="participants" name="participants" min=2 required>
                 </div>
                 <div class="form-group">
                     <textarea placeholder="내용을 입력하세요." id="content" name="content" rows="8" required></textarea>
                 </div>
-                <input type="hidden" name="userId" value="${sessionScope.userNick}">
+                <input type="hidden" name="userId" value="${sessionScope.userId}">
+                <input type="hidden" name="userNick" value="${sessionScope.userNick}">
                 <button type="submit" class="submit">글쓰기</button>
                 <button type="button" class="cancel">취소</button>
             </form>
