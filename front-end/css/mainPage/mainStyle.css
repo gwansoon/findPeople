@@ -12,26 +12,56 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #C7E2F6;
+    text-align: center;
+}
+
+.centerTextCenter {
+    /* background-color: #7694AB; */
+    width: 700px;
+}
+
+.centerWrapper h1 {
+    font-size: 50px;
+}
+
+.centerWrapper h2 {
+    font-size: 40px;
 }
 
 .centerWrapper p{
-    font-size: 30px;
+    font-size: 40px;
 }
 
-.makeGroupWrapper {
+.centerButtonWrapper {
     position: absolute;
     bottom: 40px;
 }
 
-.makeGroup {
+.centerButtonWrapper a {
+    text-decoration: none;
+}
+
+.centerButton {
+    width: 110px;
     font-family: "Noto Sans KR";
 	font-weight: 400;
-    font-size: 1rem;
-    border: solid 1.5px #7694AB;
+    font-size: 19px;
+    border: none;
     border-radius: 5px;
     background-color: #7694AB;
     color: #fff;
 	cursor: pointer;
-    width: 100px;
-    height: 40px;
+    height: 35px;
+}
+
+.makeGroupButton {
+    margin-right: 6px;
+}
+
+.myGroupButton {
+    margin-left: 6px;
+}
+
+.centerButton:hover {
+    opacity: 0.6;
 }
