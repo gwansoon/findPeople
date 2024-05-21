@@ -16,16 +16,16 @@
 		<nav class="header">
 			<div class="headerContainer">
 				<h1 class="headerStart">
-					<a class="headerTitle" href="">FindPeople</a>
+					<a class="headerTitle" href="mainpage.do?categories_num=0">FindPeople</a>
 				</h1>
 				<div class="headerCenter">
-					<a href="">전체</a>
-					<a href="">비교과</a>
-					<a href="">스터디</a>
-					<a href="">택시</a>
-					<a href="">카풀</a>
-					<a href="">식사</a>
-					<a href="">헬스</a>
+					<a class = "select" href="mainpage.do?categories_num=0">전체</a>
+					<a href="mainpage.do?categories_num=1">비교과</a>
+					<a href="mainpage.do?categories_num=2">스터디</a>
+					<a href="mainpage.do?categories_num=3">택시</a>
+					<a href="mainpage.do?categories_num=4">카풀</a>
+					<a href="mainpage.do?categories_num=5">식사</a>
+					<a href="mainpage.do?categories_num=6">헬스</a>
 				</div>
 				<div class="headerEnd">
 					<!-- 밑 로그인, 로그아웃은 로그인 세션 조건부로 둘 중 하나만 나오게 하기 -->
@@ -54,7 +54,7 @@
 				</div> 
 			</c:otherwise>
 		</c:choose> 
-		<h2>들어갈 수 있는 모임 수</h2>
+		<h2>들어갈 수 있는 전체모임 수</h2>
 		<p>- ${bullCount} -</p> <!-- 관순햄 전체 모임 개수 표시해주세요 -->
 		<div class="centerButtonWrapper"> <!-- 로그인/로그아웃 조건부 출력-->
 			<c:choose>
@@ -74,16 +74,16 @@
 	<div class="contentWrapper">
 		<ul class="content">
 			<!-- 반복문 시작 -->
-			<c:forEach items="${bullList}" var="bulletin">
+			<c:forEach items="${bullList}" var="bulletin" varStatus="status">
 			<li>
 			 <%-- ${bulletin.bullSEQ} --%>
-				<a href="getBullDetail.do?bullSEQ=${bulletin.bullSEQ}" class="groupHref"> <!-- 디테일들어가는 경로 -->
+				<a href="getBullDetail.do?bullSEQ=${bulletin.bullSEQ}&userId=${sessionScope.userId}" class="groupHref"> <!-- 디테일들어가는 경로 -->
 					<div class="groupLeft">${bulletin.categories_Title } </div>
 					<div class="groupRight">
 						<div class="groupSubject">${bulletin.bullTitle }</div>
 						<div class="groupBottomWrapper">
 							<div class="groupDate">${bulletin.bullTime}</div>
-							<div class="groupMember">3/${bulletin.participants }</div>
+							<div class="groupMember">${bullEntryCount[status.index].bullEntryCount} / ${bulletin.participants }</div>
 						</div>
 					</div>
 				</a>

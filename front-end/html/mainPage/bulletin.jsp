@@ -12,39 +12,34 @@
 </head>
 <body>
     <div class="headerWrapper"> <!-- header start -->
-		<nav class="header">
-			<div class="headerContainer">
-				<h1 class="headerStart">
-					<a class="headerTitle" href="">FindPeople</a>
-				</h1>
-				<div class="headerCenter">
-					<a href="">내 모임</a> <!-- 본인 글 목록 페이지로 이동 -->
-					<a href="">전체</a>
-					<a href="">비교과</a>
-					<a href="">스터디</a>
-					<a href="">택시</a>
-					<a href="">카풀</a>
-					<a href="">식사</a>
-					<a href="">헬스</a>
-				</div>
-				<div class="headerEnd">
-					<!-- 밑 로그인, 로그아웃은 로그인 세션 조건부로 둘 중 하나만 나오게 하기 -->
-					<c:choose>
-						<c:when test="${sessionScope.userNick == null}">
-							<a href="../loginPage/loginpage.do">
-								<button class="headerHamburger">로그인</button>
-							</a>
-						</c:when>
-					<c:otherwise>
-							<a href="../loginPage/logOut.do">	
-								<button class="headerHamburger">로그아웃</button>
-							</a>	
-						</c:otherwise>
-					</c:choose> 
-				</div>
-			</div>
-		</nav>
-	</div> <!-- header end -->
+        <nav class="header">
+            <div class="headerContainer">
+                <h1 class="headerStart">
+                    <a class="headerTitle" href="mainpage.do?categories_num=0">FindPeople</a>
+                </h1>
+                <div class="headerCenter">
+                    <a href="mainpage.do?categories_num=0">전체</a>
+                    <a href="mainpage.do?categories_num=1">비교과</a>
+                    <a href="mainpage.do?categories_num=2">스터디</a>
+                    <a href="mainpage.do?categories_num=3">택시</a>
+                    <a href="mainpage.do?categories_num=4">카풀</a>
+                    <a href="mainpage.do?categories_num=5">식사</a>
+                    <a href="mainpage.do?categories_num=6">헬스</a>
+                </div>
+                <div class="headerEnd">
+                    <!-- 밑 로그인, 로그아웃은 로그인 세션 조건부로 둘 중 하나만 나오게 하기 -->
+                    <c:choose>
+                        <c:when test="${sessionScope.userNick == null}">
+                            <a class="headerHamburger" href="../loginPage/loginpage.do">로그인</a>
+                        </c:when>
+                        <c:otherwise>
+                            <a class="headerHamburger" href="../loginPage/logOut.do">로그아웃</a>
+                        </c:otherwise>
+                    </c:choose> 
+                </div>
+            </div>
+        </nav>
+    </div> <!-- header end -->
     <section class="bull-form">
         <div class="form-content">
             <form action="insertBull.do" metod="POST">
@@ -75,7 +70,9 @@
                 <input type="hidden" name="userId" value="${sessionScope.userId}">
                 <input type="hidden" name="userNick" value="${sessionScope.userNick}">
                 <button type="submit" class="submit">글쓰기</button>
-                <button type="button" class="cancel">취소</button>
+                <a class="headerTitle" href="mainpage.do?categories_num=0">
+                	<button type="button" class="cancel" >취소</button>
+               	</a>
             </form>
         </div>
         
