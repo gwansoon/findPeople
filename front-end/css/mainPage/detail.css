@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@500&family=Noto+Sans+KR:wght@100..900&display=swap');
 
-html {
-    height: auto;
-    min-height: 105vh;
-}
-
 body{
     -ms-overflow-style: none;
 }
@@ -76,7 +71,7 @@ body{
     margin-top: 2vh;
     margin-left: 2vw;
     font-size: 15pt;
-    width: 25vw;
+    width: 25.5vw;
     border-bottom: 1px solid black;
 }
 
@@ -85,7 +80,7 @@ body{
     position: fixed;
     font-weight: 300;
     margin-top: 2vh;
-    margin-left: 8vw;
+    margin-left: 13.5vw;
     font-size: 15pt;
 }
 
@@ -94,8 +89,9 @@ body{
     position: fixed;
     font-weight: 300;
     margin-top: 2vh;
-    margin-left: 15vw;
+    margin-left: 23.5vw;
     font-size: 15pt;
+    border-bottom: 1px solid black;
 }
 
 .content {
@@ -139,20 +135,46 @@ body{
 }
 
 .memName {
+    position: relative;
+    display: inline-block;
     font-family: "Noto Sans KR", sans-serif;
     font-size: 13pt;
     font-weight: 400;
+    max-width: 5.6vw;
+    height: 3vh;
+    white-space: nowrap;
+    overflow: auto;
+    text-overflow: clip;
+}
+
+.kickBox {
+    position: relative;
+    display: inline-block;
+    width: 7vw;
+    height: 3vh;
+    top: 0.3vh;
+}
+
+.IsLeader {
+    position: absolute;
+    opacity: 100;
+    position: fixed;
+    top: 18vh;
+    left: 85vw;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 13pt;
+    font-weight: 800;
 }
 
 .kick {
     position: relative;
-    opacity: 0;
-    left: 8.5vw;
+    top: -0.8vh;
     font-size: 15pt;
-    font-weight: 300;
-    text-decoration: none;
-    color: black;
+    font-weight: 500;
+    border: none;
+    background-color: transparent;
     cursor: pointer;
+    color: red;
     font-family: "Noto Sans KR", sans-serif;
 }
 
@@ -161,11 +183,8 @@ body{
     width: 13.5vw;
 }
 
-.hang:hover .kick {
-    opacity: 100;
-}
-
 .commentGrid {
+    opacity: 0;
     position: absolute;
     display: inline-block;
     margin-top: 97.5vh;
