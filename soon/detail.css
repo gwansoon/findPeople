@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@500&family=Noto+Sans+KR:wght@100..900&display=swap');
+
+body{
+    -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.headerWrapper {
+    z-index: 99;
+}
+
+.detailBox {
+    position: absolute;
+    min-height: 88.5vh;
+    height: auto;
+    overflow: auto;
+    width: 50vw;
+    margin-top: 7vh;
+    translate: 50% 0;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    background-color: #d0d9e0;
+}
+
+.titleBox {
+    position: absolute;
+    display: inline-block;
+    width: 38vw;
+    height: 7vh;
+    margin-top: 3vh;
+    margin-left: 6vw;
+    border-radius: 20px;
+    padding-top: 1.5vh;
+    text-align: center;
+    align-items: center;
+    background-color: white;
+}
+
+.title {
+    display: inline-block;
+    font-family: "Noto Sans KR", sans-serif;
+    margin-top: 0.3vh;
+    font-size: 19.5pt;
+    font-weight: 700;
+    width: 34vw;
+    height: 7vh;
+}
+
+.contentBox {
+    position: absolute;
+    display: inline-block;
+    margin-top: 13.5vh;
+    margin-left: 2.5vw;
+    margin-bottom: 1vh;
+    width: 45vw;
+    min-height: 72vh;
+    height: auto;
+    margin-bottom: 1vh;
+    padding-bottom: 2vh;
+    border-radius: 15px;
+    background-color: white;
+}
+
+.category {
+    font-family: "Noto Sans KR", sans-serif;
+    position: fixed;
+    font-weight: 300;
+    margin-top: 2vh;
+    margin-left: 2vw;
+    font-size: 15pt;
+    width: 25.5vw;
+    border-bottom: 1px solid black;
+}
+
+.member {
+    font-family: "Noto Sans KR", sans-serif;
+    position: fixed;
+    font-weight: 300;
+    margin-top: 2vh;
+    margin-left: 13.5vw;
+    font-size: 15pt;
+}
+
+.time {
+    font-family: "Noto Sans KR", sans-serif;
+    position: fixed;
+    font-weight: 300;
+    margin-top: 2vh;
+    margin-left: 23.5vw;
+    font-size: 15pt;
+    border-bottom: 1px solid black;
+}
+
+.content {
+    font-family: "Noto Sans KR", sans-serif;
+    margin-top: 7.5vh;
+    margin-left: 1.5vw;
+    margin-right: 1vw;
+    font-size: 17pt;
+    font-weight: 400;
+    word-break: break-all;
+}
+
+.joinMemList {
+    position: fixed;
+    left: 78vw;
+    top: 13vh;
+    width: 15vw;
+    min-height: 9vh;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px 1px rgba(0, 0, 0, 0.538);
+    background-color: #d0d9e0;
+}
+
+.listTxt {
+    position: relative;
+    top: 0.8vh;
+    left: 0.8vw;
+    width: 13.5vw;
+    border-bottom: 1px solid black;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 16pt;
+    font-weight: 700;
+}
+
+.joinMemBox {
+    position: relative;
+    margin-top: 0.8vh;
+    margin-left: 0.8vw;
+    margin-right: 1vw;
+}
+
+.memName {
+    position: relative;
+    display: inline-block;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 13pt;
+    font-weight: 400;
+    max-width: 5.6vw;
+    height: 3vh;
+    white-space: nowrap;
+    overflow: auto;
+    text-overflow: clip;
+}
+
+.kickBox {
+    position: relative;
+    display: inline-block;
+    width: 7vw;
+    height: 3vh;
+    top: 0.3vh;
+}
+
+.IsLeader {
+    position: absolute;
+    opacity: 100;
+    position: fixed;
+    top: 18vh;
+    left: 85vw;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 13pt;
+    font-weight: 800;
+}
+
+.kick {
+    position: relative;
+    top: -0.8vh;
+    font-size: 15pt;
+    font-weight: 500;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: red;
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+.hang {
+    display: inline-block;
+    width: 13.5vw;
+}
+
+.commentGrid {
+    opacity: 0;
+    position: absolute;
+    display: inline-block;
+    margin-top: 97.5vh;
+    margin-left: 25vw;
+    width: 50vw;
+    min-height: 20vh;
+    background-color: rgb(255, 255, 255);
+    background-color: #d0d9e0;
+    border-radius: 15px;
+}
+
+.text {
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 16pt;
+    font-weight: 600;
+    margin-left: 1vw;
+    margin-top: 1vh;
+}
+
+.commentBox {
+    margin-left: 2.55vw;
+    margin-top: 0.5vh;
+    padding-top: 1vw;
+    width: 45vw;
+    height: auto;
+    min-height: 12vh;
+    border-radius: 15px;
+    background-color: white;
+}
+
+.commentName {
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 13pt;
+    font-weight: 500;
+    margin-left: 1vw;
+    width: 5vw;
+    height: 3.5vh;
+    border-radius: 10px;
+    background-color: #d0d9e0;
+    line-height: 2vw;
+    text-align: center;
+}
+
+.comment {
+    display: inline-block;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 12pt;
+    font-weight: 400;
+    margin: 0.5vw 1vw 0 1.5vw;
+    word-break: break-all;
+}
+
+.joinBtn {
+    font-family: "Noto Sans KR", sans-serif;
+    z-index: 99;
+    position: fixed;
+    display: inline-block;
+    margin-top: 92vh;
+    margin-left: 39vw;
+    width: 10vw;
+    height: 6vh;
+    align-content: center;
+    text-align: center;
+    border: none;
+    border-radius: 13px;
+    color: white;
+    font-weight: 800;
+    font-size: 20pt;
+    background-color: rgb(193, 154, 154);
+}
+
+.exitBtn {
+    z-index: 99;
+    position: fixed;
+    display: inline-block;
+    margin-top: 92vh;
+    margin-left: 50vw;
+    width: 10vw;
+    height: 6vh;
+    align-content: center;
+    text-align: center;
+    border: none;
+    border-radius: 13px;
+    color: white;
+    font-weight: 800;
+    font-size: 20pt;
+    background-color: rgb(186, 186, 186);
+    
+    
+}
+h3 {display:inline}
