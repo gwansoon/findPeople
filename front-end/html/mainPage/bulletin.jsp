@@ -45,7 +45,7 @@
             <form action="insertBull.do" metod="POST">
                 <h1 id="formTitle">게시글</h1>
                 <div class="form-group">
-                    <input placeholder="제목을 입력하세요." type="text" id="title" name="bullTitle" required>
+                    <input placeholder="제목을 입력하세요." type="text" id="title" name="bullTitle" maxlength="20" required>
                 </div>
                 <div class="form-group">
                     <input placeholder="시간을 입력하세요. ex) 매주 목요일 10시" type="text" id="time" name="bullTime" required>
@@ -71,8 +71,8 @@
                 <input type="hidden" name="userNick" value="${sessionScope.userNick}">
                 <button type="submit" class="submit">글쓰기</button>
                 <a class="headerTitle" href="mainpage.do?categories_num=0">
-                	<button type="button" class="cancel" >취소</button>
-               	</a>
+                    <button type="button" class="cancel" >취소</button>
+                </a>
             </form>
         </div>
         

@@ -46,10 +46,10 @@
             <div class="title" id="bullTitle">${bullDetail.bullTitle}</div>
         </div>
         <div class="contentBox">
-            <div class="category" id="categories_ID">카테고리 : ${bullDetail.categories_Title}</div>
-            <div class="member" id="participants">인원 : 현원/${bullDetail.participants}</div>
-			<div class="time" id="bullTime">일정 : ${bullDetail.bullTime}</div>
-            <div class="content" id="content">${bullDetail.content}</div>
+            <div class="category" id="categories_ID"><h3> 카테고리</h3> : ${bullDetail.categories_Title}</div>
+            <div class="member" id="participants"><h3>인원</h3> : ${bullDetail.bullEntryCount} / ${bullDetail.participants}</div>
+			<div class="time" id="bullTime"><h3> 일정</h3> : ${bullDetail.bullTime}</div>
+			<div class="content" id="content">${bullDetail.content}</div>
         </div>
     </div>
 	<div class="joinMemList">
@@ -57,23 +57,22 @@
 		<div class="joinMemBox">
 			<table>
 				<c:forEach items="${entryList}" var="bulletin">
-				<tr class="hang" > <!--이부분 반복-->
-					<td class="memName" id="usernick">${bulletin.userNick}</td> <!-- 닉네임으로 바꿔 -->
-					<td>
-						<!-- <a href="#" class="kick" onlick=none>x</a> -->
+				<tr> <!--이부분 반복-->
+					<td class="row">
+						<div class="memName" id="usernick">${bulletin.userNick}</div>
 						<c:choose>
 							<c:when test="${bulletin.userId == bullDetail.userId }">
-								<h3>  방장</h3>
+								<div class="IsLeader">방장</div>
 							</c:when>
-							<c:otherwise> 
+							<c:otherwise>
 								<c:choose>
 									<c:when test="${sessionScope.userId == bullDetail.userId}">
-										<form action="deleteUser.do" metod ="get" >
+										<form action="deleteUser.do" metod ="get">
 											<!-- 삭제할 게시글 번호 -->
 											<input type="hidden" name="bullSEQ" value="${bullDetail.bullSEQ}">
 											<!-- 삭제할사람아이디 -->
 											<input type="hidden" name="userId" value="${bulletin.userId}"> 
-											<input type="submit" value="x">
+											<input class="kick" type="submit" value="x">
 										</form>
 									</c:when>
 								</c:choose>
@@ -95,12 +94,9 @@
 			<div class="comment" id="comment_content">댓글댓글댓글댓글댓글댓글댓글댓글댓글댓글댓글댓글댓글댓글댓글댓글댓글댓글댓글댓글댓글</div>
 		</div> <!--여기까지.-->
 	</div>
-	<!-- <button class="joinBtn">가입하기</button> -->
-	<!-- <button class="exitBtn">탈퇴하기</button> -->
-	
 	<c:choose>
 		<c:when test="${sessionScope.userId == bullDetail.userId}"> <!-- 내아이디랑 방장 아이디랑 같은경우 -->
-			<button class="joinBtn">모임 해체하기</button>
+			<button class="clearBtn">모임 해체하기</button>
 		</c:when>
 		<c:otherwise> <!-- 내아이디랑 방장 아이디랑 다른경우 -->
 			<c:choose>

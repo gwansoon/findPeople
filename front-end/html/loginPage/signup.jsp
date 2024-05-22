@@ -62,7 +62,7 @@
             </div>
             <!--<div>-->
                 <div class="int-area">
-                    <input type="text" name="userNick"auticomplete="off"required >
+                    <input type="text" name="userNick"auticomplete="off"required maxlength="10">
                     <label for ="userNick">닉네임</label> 
                 </div>
             <!--</div>-->
