@@ -54,7 +54,8 @@
 				</div> 
 			</c:otherwise>
 		</c:choose> 
-		<h2>들어갈 수 있는 전체모임 수</h2>
+		<h2>들어갈 수 있는</h2>
+		<h2>전체모임 수</h2>
 		<p>- ${bullCount} -</p> <!-- 관순햄 전체 모임 개수 표시해주세요 -->
 		<div class="centerButtonWrapper"> <!-- 로그인/로그아웃 조건부 출력-->
 			<c:choose>
@@ -62,7 +63,7 @@
 					<a href="../mainPage/bulletin.do">
 						<button class="centerButton makeGroupButton">모임 만들기</button>
 					</a>
-					<a  href="">
+					<a  href="myGroup.do?userId=${sessionScope.userId}">
 						<button class="centerButton myGroupButton">내 모임</button>
 					</a>
 				</c:when>
@@ -83,7 +84,9 @@
 						<div class="groupSubject">${bulletin.bullTitle }</div>
 						<div class="groupBottomWrapper">
 							<div class="groupDate">${bulletin.bullTime}</div>
+							
 							<div class="groupMember">${bullEntryCount[status.index].bullEntryCount} / ${bulletin.participants }</div>
+							
 						</div>
 					</div>
 				</a>

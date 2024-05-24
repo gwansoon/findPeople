@@ -82,9 +82,7 @@
 				</tr> <!--여기까지-->
 				</c:forEach>
 			</table>
-			<tr>
-				
-			</tr>
+			
 		</div>
 	</div>
 	<div class="commentGrid">
@@ -94,16 +92,26 @@
 			<div class="comment" id="comment_content">댓글댓글댓글댓글댓글댓글댓글댓글댓글댓글댓글댓글댓글댓글댓글댓글댓글댓글댓글댓글댓글</div>
 		</div> <!--여기까지.-->
 	</div>
+	
 	<c:choose>
 		<c:when test="${sessionScope.userId == bullDetail.userId}"> <!-- 내아이디랑 방장 아이디랑 같은경우 -->
-			<button class="clearBtn">모임 해체하기</button>
+			<a href="deleteBull.do?bullSEQ=${bullDetail.bullSEQ}&userId=${sessionScope.userId} ">
+				<button class="clearBtn">모임 해체하기</button>
+			</a>
 		</c:when>
 		<c:otherwise> <!-- 내아이디랑 방장 아이디랑 다른경우 -->
 			<c:choose>
-				<c:when test="${myBullChk == 0}">
-					<a href="bullEnter.do?bullSEQ=${bullDetail.bullSEQ}&userId=${sessionScope.userId} ">
-						<button class="joinBtn">가입하기</button>
-					</a> 
+				<c:when test="${myBullChk == 0}"> <!-- if(entry return이 = 0인 경우  -> 가입되지 않은 경우){ -->
+					<c:choose>
+						<c:when test="${bullDetail.bullEntryCount == bullDetail.participants}">
+							<button class="joinBtn">정원 모집 마감</button>
+						</c:when>
+						<c:otherwise>
+							<a href="bullEnter.do?bullSEQ=${bullDetail.bullSEQ}&userId=${sessionScope.userId} ">
+								<button class="joinBtn">가입하기</button>
+							</a> 
+						</c:otherwise>
+					</c:choose>
 				</c:when>
 				<c:otherwise> 
 					<a href="deleteUser.do?bullSEQ=${bullDetail.bullSEQ}&userId=${sessionScope.userId} ">
