@@ -13,7 +13,7 @@
 		<nav class="header">
 			<div class="headerContainer">
 				<h1 class="headerStart">
-					<a class="headerTitle" href="">FindPeople</a>
+					<a class="headerTitle" href="mainpage.do?categories_num=0">FindPeople</a>
 				</h1>
 				<div class="headerCenter">
 					<a href="">내 모임</a> <!-- 본인 글 목록 페이지로 이동 -->

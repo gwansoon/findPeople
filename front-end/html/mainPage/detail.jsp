@@ -82,11 +82,12 @@
 				</tr> <!--여기까지-->
 				</c:forEach>
 			</table>
-			
 		</div>
 	</div>
+	
 	<div class="commentGrid">
 		<div class="text">댓글</div>
+		
 		<div class="commentBox"> <!--댓글 여기 반복하심 됩니다.-->
 			<div class="commentName" id="comment_author">박건호</div>
 			<div class="comment" id="comment_content">댓글댓글댓글댓글댓글댓글댓글댓글댓글댓글댓글댓글댓글댓글댓글댓글댓글댓글댓글댓글댓글</div>
