@@ -5,11 +5,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="../resources/static/css/mainPage/detail.css">
+	<link rel="stylesheet" href="../resources/static/css/mainPage/detail.css?after">
     <link rel="stylesheet" href="../resources/static/css/headerStyle.css">
     <title>Detail</title>
 </head>
 <body>
+
+<%
+	String userid = (String)session.getAttribute("userId");
+	if(userid == null){
+	%>
+		<script>
+			alert("로그인 후 이용해주세요");
+			location.href='../loginPage/loginpage.do';
+		</script>
+	
+	<%
+	}
+	%>
     <div class="headerWrapper"> <!-- header start -->
         <nav class="header">
             <div class="headerContainer">
@@ -88,42 +101,46 @@
 		<div class="text">
 		    댓글
 		</div>
-		
-		<div class="commentBox"> 
-			
-			<form action="insertComment.do" metod="POST">
-				<div class="commentWrtieBox" id="comment_content">
-					<textarea class="commentWrite" placeholder="댓글을 입력하세요." id="comment" name="comment" rows="2" required></textarea>
-				</div>
-				<div class="commentWrtieBtnWrapper" id="comment_author">
-				    <input type="hidden" name="userId" value="${sessionScope.userId}">
-                	<input type="hidden" name="bullSEQ" value="${bullDetail.bullSEQ}">
-                
-					<button type="submit" class="submit">글쓰기</button>
-				</div>
-			</form>
-		</div> 
-		
-		<c:forEach items="${commentList}" var="bulletin" >
-			<div class="commentBox"> <!--댓글 여기 반복하심 됩니다.-->
-				<div class="commentBoxHeader">
-					<div class="commentName" id="comment_author">${bulletin.userNick}
+		<c:choose>
+				<c:when test="${myBullChk == 0}">
+				
+				모임에 가입 후 댓글을 확인하세요!
+				</c:when>
+				<c:otherwise>
+					<div class="commentBox"> 	
+						<form action="insertComment.do" metod="POST">
+							<div class="commentWrtieBox" id="comment_content">
+								<textarea class="commentWrite" placeholder="댓글을 입력하세요." id="comment" name="comment" rows="2" required></textarea>
+							</div>
+							<div class="commentWrtieBtnWrapper" id="comment_author">
+							    <input type="hidden" name="userId" value="${sessionScope.userId}">
+			                	<input type="hidden" name="bullSEQ" value="${bullDetail.bullSEQ}">
+			                
+								<button type="submit" class="submit">글쓰기</button>
+							</div>
+						</form>
 					</div> 
-					<c:choose>
-						<c:when test="${sessionScope.userId == bulletin.userId}">
-							<form action="deleteComment.do" metod ="get">
-								<input type="hidden" name="userId" value="${sessionScope.userId}">
-								<input type="hidden" name="bullSEQ" value="${bullDetail.bullSEQ}">	
-								<input type="hidden" name="commentSEQ" value="${bulletin.commentSEQ}">
-								<input class="deleteCommentBtn" type="submit" value="x">
-							</form>
-						</c:when>
-					</c:choose>
-				</div>
-				<div class="comment" id="comment_content">${bulletin.comment}</div>
-			</div> <!--여기까지.-->
-		</c:forEach>
-		
+					<c:forEach items="${commentList}" var="bulletin" >
+						<div class="commentBox"> <!--댓글 여기 반복하심 됩니다.-->
+							<div class="commentBoxHeader">
+								<div class="commentName" id="comment_author">${bulletin.userNick}
+								</div> 
+								<c:choose>
+									<c:when test="${sessionScope.userId == bulletin.userId}">
+										<form action="deleteComment.do" metod ="get">
+											<input type="hidden" name="userId" value="${sessionScope.userId}">
+											<input type="hidden" name="bullSEQ" value="${bullDetail.bullSEQ}">	
+											<input type="hidden" name="commentSEQ" value="${bulletin.commentSEQ}">
+											<input class="deleteCommentBtn" type="submit" value="댓글삭제">
+										</form>
+									</c:when>
+								</c:choose>
+							</div>
+							<div class="comment" id="comment_content">${bulletin.comment}</div>
+						</div> <!--여기까지.-->
+					</c:forEach>
+			</c:otherwise>
+		</c:choose>
 	</div>
 	
 	
