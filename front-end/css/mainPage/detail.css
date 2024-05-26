@@ -186,6 +186,7 @@ body{
     background-color: rgb(255, 255, 255);
     background-color: #d0d9e0;
     border-radius: 15px;
+    padding-bottom: 7vh;
 }
 
 .text {
@@ -199,12 +200,47 @@ body{
 .commentBox {
     margin-left: 2.55vw;
     margin-top: 0.5vh;
+    margin-bottom: 2vh;
     padding-top: 1vw;
+    padding-bottom: 1px;
     width: 45vw;
     height: auto;
     min-height: 12vh;
     border-radius: 15px;
     background-color: white;
+}
+
+.commentWrite {
+    border: none;
+    resize: none;
+    width: 90%;
+    height: 60px;
+    margin-left: 10px;
+}
+
+.commentWrtieBtnWrapper {
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 13pt;
+    font-weight: 500;
+    margin-bottom: 5px;
+    margin-left: 6px;
+    width: 6vw;
+    height: 3.5vh;
+    border-radius: 10px;
+    background-color: #d0d9e0;
+    line-height: 2vw;
+    text-align: center;
+}
+
+.submit {
+    border: none;
+    background-color: #d0d9e0;
+    margin-bottom: 10px;
+}
+
+.commentBoxHeader {
+    display: flex;
+    gap: 5px;
 }
 
 .commentName {
@@ -218,6 +254,11 @@ body{
     background-color: #d0d9e0;
     line-height: 2vw;
     text-align: center;
+}
+
+.deleteCommentBtn {
+    border: none;
+    background-color: white;
 }
 
 .comment {
@@ -234,8 +275,10 @@ body{
     z-index: 99;
     position: fixed;
     display: inline-block;
-    margin-top: 92vh;
-    margin-left: 39vw;
+    left: 45%;
+    bottom: 2vh;
+    /* margin-top: 92vh;
+    margin-left: 39vw; */
     width: 10vw;
     height: 5.5vh;
     align-content: center;
@@ -253,8 +296,10 @@ body{
     z-index: 99;
     position: fixed;
     display: inline-block;
-    margin-top: 92vh;
-    margin-left: 39vw;
+    left: 45%;
+    bottom: 2vh;
+    /* margin-top: 92vh;
+    margin-left: 39vw; */
     width: 10vw;
     height: 6vh;
     align-content: center;
@@ -270,9 +315,11 @@ body{
 .exitBtn {
     z-index: 99;
     position: fixed;
+    left: 45%;
+    bottom: 2vh;
+    /* margin-top: 92vh; */
+    /* margin-left: 50vw; */
     display: inline-block;
-    margin-top: 92vh;
-    margin-left: 50vw;
     width: 10vw;
     height: 6vh;
     align-content: center;
