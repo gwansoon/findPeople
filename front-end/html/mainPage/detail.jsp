@@ -82,16 +82,52 @@
 				</tr> <!--여기까지-->
 				</c:forEach>
 			</table>
-			
 		</div>
 	</div>
+	
 	<div class="commentGrid">
-		<div class="text">댓글</div>
-		<div class="commentBox"> <!--댓글 여기 반복하심 됩니다.-->
-			<div class="commentName" id="comment_author">박건호</div>
-			<div class="comment" id="comment_content">댓글댓글댓글댓글댓글댓글댓글댓글댓글댓글댓글댓글댓글댓글댓글댓글댓글댓글댓글댓글댓글</div>
-		</div> <!--여기까지.-->
+		<div class="text">
+		    댓글
+		</div>
+		
+		<div class="commentBox"> 
+			
+			<form action="insertComment.do" metod="POST">
+				<div class="comment" id="comment_content">
+					<textarea placeholder="댓글을 입력하세요." id="comment" name="comment" rows="2" required></textarea>
+				</div>
+				<div class="commentName" id="comment_author">
+				    <input type="hidden" name="userId" value="${sessionScope.userId}">
+                	<input type="hidden" name="bullSEQ" value="${bullDetail.bullSEQ}">
+                
+					<button type="submit" class="submit">글쓰기</button>
+				</div>
+			</form>
+		</div> 
+		
+		<c:forEach items="${commentList}" var="bulletin" >
+			<div class="commentBox"> <!--댓글 여기 반복하심 됩니다.-->
+				<div class="commentName" id="comment_author">${bulletin.userNick}
+				
+				<c:choose>
+					<c:when test="${sessionScope.userId == bulletin.userId}">
+						<form action="deleteComment.do" metod ="get">
+							<input type="hidden" name="userId" value="${sessionScope.userId}">
+	                		<input type="hidden" name="bullSEQ" value="${bullDetail.bullSEQ}">	
+							<input type="hidden" name="commentSEQ" value="${bulletin.commentSEQ}">
+							<input type="submit" value="x">
+						</form>
+					</c:when>
+				</c:choose>
+				</div> 
+				<div class="comment" id="comment_content">${bulletin.comment}</div>
+				
+				
+			</div> <!--여기까지.-->
+		</c:forEach>
+		
 	</div>
+	
 	
 	<c:choose>
 		<c:when test="${sessionScope.userId == bullDetail.userId}"> <!-- 내아이디랑 방장 아이디랑 같은경우 -->
@@ -121,9 +157,6 @@
 			</c:choose>
 		</c:otherwise>
 	</c:choose>
-	
-	myBullChk
-	
 		
 </body>
 </html>
