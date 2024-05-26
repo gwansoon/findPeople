@@ -197,6 +197,13 @@ body{
     margin-top: 1vh;
 }
 
+.noJoinText {
+    font-family: "Noto Sans KR", sans-serif;
+    margin-left: 1vw;
+    margin-top: 1vh;
+    text-align: center;
+}
+
 .commentBox {
     margin-left: 2.55vw;
     margin-top: 0.5vh;
