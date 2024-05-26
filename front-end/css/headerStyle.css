@@ -98,6 +98,10 @@
 	text-decoration: none;
 }
 
+/* .select {
+	background-color: #ffffff;
+}
+ */
 .headerHamburger:hover {
 	opacity: 0.7;
 }

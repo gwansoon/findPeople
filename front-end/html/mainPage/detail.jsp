@@ -104,7 +104,8 @@
 		<c:choose>
 				<c:when test="${myBullChk == 0}">
 				<div class="noJoinText">
-					모임에 가입 후 댓글을 확인하세요!
+					<br>
+					<h3>모임에 가입 후 댓글을 확인하세요!</h3>
 				</div>
 				</c:when>
 				<c:otherwise>
