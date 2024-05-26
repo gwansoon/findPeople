@@ -11,6 +11,9 @@
     <title>Blue Border</title>
 </head>
 <body>
+
+
+
     <div class="headerWrapper"> <!-- header start -->
         <nav class="header">
             <div class="headerContainer">
@@ -52,7 +55,7 @@
                 </div>
                 <div class="form-group">
                     <select name="categories_ID" id="formSelectCategory">
-                        <option value="none" hidden>카테고리</option>
+                        <option value="1" hidden>카테고리</option>
                         <option value=1>비교과</option>
                         <option value=2>스터디</option>
                         <option value=3>택시</option>
