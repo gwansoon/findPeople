@@ -9,13 +9,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../resources/static/css/headerStyle.css">
     <link rel="stylesheet" href="../resources/static/css/signupStyle.css">
+    
 </head>
 <body>
 	<div class="headerWrapper"> <!-- header start -->
 		<nav class="header">
 			<div class="headerContainer">
 				<h1 class="headerStart">
-					<a class="headerTitle" href="mainpage.do?categories_num=0">FindPeople</a>
+					<a class="headerTitle" href="../mainPage/mainpage.do?categories_num=0">FindPeople</a>
 				</h1>
 				<div class="headerCenter">
 					<a href="">내 모임</a> <!-- 본인 글 목록 페이지로 이동 -->
@@ -49,8 +50,10 @@
         <h1> 회원가입 </h1>
         <form action="userInsert.do" method = "POST">
             <div class="int-area">
-                <input type ="text" name ="userId" autocomplete="off" required>
-                <label for ="userId"> 아이디</label>
+                <input type ="text" name ="userId" id="userId" autocomplete="off" required>
+                 <label for ="userId"> 아이디</label>
+               
+             
             </div >
             <div class="int-area">
                 <input type="password" name="userPass" autocomplete="off" required >
