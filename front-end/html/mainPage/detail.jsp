@@ -1,12 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../resources/static/css/mainPage/detail.css">
+	<link rel="stylesheet" href="../resources/static/css/mainPage/detail.css">
     <link rel="stylesheet" href="../resources/static/css/headerStyle.css">
     <title>Detail</title>
 </head>
@@ -93,10 +92,10 @@
 		<div class="commentBox"> 
 			
 			<form action="insertComment.do" metod="POST">
-				<div class="comment" id="comment_content">
-					<textarea placeholder="댓글을 입력하세요." id="comment" name="comment" rows="2" required></textarea>
+				<div class="commentWrtieBox" id="comment_content">
+					<textarea class="commentWrite" placeholder="댓글을 입력하세요." id="comment" name="comment" rows="2" required></textarea>
 				</div>
-				<div class="commentName" id="comment_author">
+				<div class="commentWrtieBtnWrapper" id="comment_author">
 				    <input type="hidden" name="userId" value="${sessionScope.userId}">
                 	<input type="hidden" name="bullSEQ" value="${bullDetail.bullSEQ}">
                 
@@ -107,22 +106,21 @@
 		
 		<c:forEach items="${commentList}" var="bulletin" >
 			<div class="commentBox"> <!--댓글 여기 반복하심 됩니다.-->
-				<div class="commentName" id="comment_author">${bulletin.userNick}
-				
-				<c:choose>
-					<c:when test="${sessionScope.userId == bulletin.userId}">
-						<form action="deleteComment.do" metod ="get">
-							<input type="hidden" name="userId" value="${sessionScope.userId}">
-	                		<input type="hidden" name="bullSEQ" value="${bullDetail.bullSEQ}">	
-							<input type="hidden" name="commentSEQ" value="${bulletin.commentSEQ}">
-							<input type="submit" value="x">
-						</form>
-					</c:when>
-				</c:choose>
-				</div> 
+				<div class="commentBoxHeader">
+					<div class="commentName" id="comment_author">${bulletin.userNick}
+					</div> 
+					<c:choose>
+						<c:when test="${sessionScope.userId == bulletin.userId}">
+							<form action="deleteComment.do" metod ="get">
+								<input type="hidden" name="userId" value="${sessionScope.userId}">
+								<input type="hidden" name="bullSEQ" value="${bullDetail.bullSEQ}">	
+								<input type="hidden" name="commentSEQ" value="${bulletin.commentSEQ}">
+								<input class="deleteCommentBtn" type="submit" value="x">
+							</form>
+						</c:when>
+					</c:choose>
+				</div>
 				<div class="comment" id="comment_content">${bulletin.comment}</div>
-				
-				
 			</div> <!--여기까지.-->
 		</c:forEach>
 		
