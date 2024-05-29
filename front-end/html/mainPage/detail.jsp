@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="../resources/static/css/mainPage/detail.css?after">
     <link rel="stylesheet" href="../resources/static/css/headerStyle.css">
+	<link rel="stylesheet" href="../../css/mainPage/detail.css?after">
+    <link rel="stylesheet" href="../../css/headerStyle.css">
     <title>Detail</title>
 </head>
 <body>
@@ -65,35 +67,52 @@
         </div>
     </div>
 	<div class="joinMemList">
-		<div class="listTxt">참여자</div>
-		<div class="joinMemBox">
-			<table>
-				<c:forEach items="${entryList}" var="bulletin">
-				<tr> <!--이부분 반복-->
-					<td class="row">
-						<div class="memName" id="usernick">${bulletin.userNick}</div>
-						<c:choose>
-							<c:when test="${bulletin.userId == bullDetail.userId }">
-								<div class="IsLeader">방장</div>
-							</c:when>
-							<c:otherwise>
+		<div class="memListWrapper">
+
+			<div class="listTxt">참여자</div>
+			<div class="joinMemBox">
+				<table>
+					<c:forEach items="${entryList}" var="bulletin">
+						<tr> <!--이부분 반복-->
+							<td class="row">
+								<div class="memName" id="usernick">test</div>
 								<c:choose>
-									<c:when test="${sessionScope.userId == bullDetail.userId}">
-										<form action="deleteUser.do" metod ="get">
-											<!-- 삭제할 게시글 번호 -->
-											<input type="hidden" name="bullSEQ" value="${bullDetail.bullSEQ}">
-											<!-- 삭제할사람아이디 -->
-											<input type="hidden" name="userId" value="${bulletin.userId}"> 
-											<input class="kick" type="submit" value="x">
-										</form>
+									<c:when test="${bulletin.userId == bullDetail.userId }">
+										<div class="IsLeader">방장</div>
 									</c:when>
+									<c:otherwise>
+										<c:choose>
+											<c:when test="${sessionScope.userId == bullDetail.userId}">
+												<form action="deleteUser.do" metod ="get">
+													<!-- 삭제할 게시글 번호 -->
+													<input type="hidden" name="bullSEQ" value="${bullDetail.bullSEQ}">
+													<!-- 삭제할사람아이디 -->
+													<input type="hidden" name="userId" value="${bulletin.userId}"> 
+													<input class="kick" type="submit" value="x">
+												</form>
+											</c:when>
+										</c:choose>
+									</c:otherwise>
 								</c:choose>
-							</c:otherwise>
-						</c:choose>
-					</td>
-				</tr> <!--여기까지-->
-				</c:forEach>
-			</table>
+							</td>
+						</tr> <!--여기까지-->
+					</c:forEach>
+				</table>
+			</div>
+		</div>
+		<div class="waitList">
+			<div>
+				이름
+			</div>
+			<div>
+				전공
+			</div>
+			<div>
+				학번
+			</div>
+			<div>
+
+			</div>
 		</div>
 	</div>
 	

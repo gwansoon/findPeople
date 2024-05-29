@@ -111,9 +111,15 @@ body{
     width: 17vw;
     min-height: 9vh;
     height: auto;
-    border-radius: 10px;
-    box-shadow: 3px 3px 8px 1px rgba(0, 0, 0, 0.538);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.memListWrapper{
     background-color: #d0d9e0;
+    box-shadow: 3px 3px 8px 1px rgba(0, 0, 0, 0.538);
+    
 }
 
 .listTxt {
@@ -175,6 +181,11 @@ body{
     color: red;
     font-family: "Noto Sans KR", sans-serif;
     float: left;
+}
+
+.waitList {
+    box-shadow: 3px 3px 8px 1px rgba(0, 0, 0, 0.538);
+    background-color: #d0d9e0;
 }
 
 .commentGrid {
