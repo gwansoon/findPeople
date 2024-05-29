@@ -7,12 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="../resources/static/css/mainPage/detail.css?after">
     <link rel="stylesheet" href="../resources/static/css/headerStyle.css">
-	<link rel="stylesheet" href="../../css/mainPage/detail.css?after">
-    <link rel="stylesheet" href="../../css/headerStyle.css">
+	<!-- <link rel="stylesheet" href="../../css/mainPage/detail.css?after">
+    <link rel="stylesheet" href="../../css/headerStyle.css"> -->
     <title>Detail</title>
 </head>
 <body>
-
 <%
 	String userid = (String)session.getAttribute("userId");
 	if(userid == null){
@@ -75,7 +74,7 @@
 					<c:forEach items="${entryList}" var="bulletin">
 						<tr> <!--이부분 반복-->
 							<td class="row">
-								<div class="memName" id="usernick">test</div>
+								<div class="memName" id="usernick">${userNick}</div>
 								<c:choose>
 									<c:when test="${bulletin.userId == bullDetail.userId }">
 										<div class="IsLeader">방장</div>
@@ -100,20 +99,30 @@
 				</table>
 			</div>
 		</div>
-		<div class="waitList">
-			<div>
-				이름
+		<div class="waitList"> <!-- 반복 시작 -->
+			<div class="waitInform">
+				<div>
+					<div>
+						이동학
+					</div>
+					<div>
+						20192776
+					</div>
+				</div>
+				<div>
+					<div>
+						남자
+					</div>
+					<div>
+						소프트웨어
+					</div>
+				</div>
 			</div>
-			<div>
-				전공
+			<div class="waitBtn">
+				<button>승인</button>
+				<button>취소</button>
 			</div>
-			<div>
-				학번
-			</div>
-			<div>
-
-			</div>
-		</div>
+		</div> <!-- 반복 취소 -->
 	</div>
 	
 	<div class="commentGrid">
