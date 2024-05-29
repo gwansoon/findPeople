@@ -185,7 +185,31 @@ body{
 
 .waitList {
     box-shadow: 3px 3px 8px 1px rgba(0, 0, 0, 0.538);
-    background-color: #d0d9e0;
+    border-radius: 5px;
+    background-color: #fbfbfb;
+}
+
+.waitInform {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 5px;
+    justify-content: space-evenly;
+    text-align: start;
+    border-bottom: 1px solid gray;
+}
+
+.waitBtn {
+    text-align: center;
+    padding-bottom: 4px;
+}
+
+.waitBtn button{
+    border: none;
+    width: 45%;
+    cursor: pointer;
+    background-color: #fbfbfb;
 }
 
 .commentGrid {
