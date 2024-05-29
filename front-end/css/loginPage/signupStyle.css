@@ -5,8 +5,7 @@
 }
 
 body {
-
-    /*font-family: 'Tangerine', serif;*/
+    /* font-family: 'Tangerine', serif; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,35 +31,30 @@ body {
 }
 
 .int-area { 
-
-
-    
     margin-left: 25px;
     margin-right: 25px;
     margin-bottom:10px;
     position: relative;
-    
 }
 
 .int-area:first-child {margin-top: 0;}
 
 .int-area input {
     width: 100%;
-    padding: 20px 10px 10px;
+    height: 50px;
+    padding: 15px 17px 10px;
     background-color: transparent;
     border-radius: 20px;
     border:2px solid #C7E2F6;
     border-bottom: 2px solid #C7E2F6;
     font-size: 18px; color: #1a1919;
     outline: none; 
-    /*margin-bottom: 10px;*/
 }
 
 .int-area label {
-    
     margin-left:3%;
     position: absolute; left: 10px; top: 15px;
-    font-size: 18px;  color: #636363;
+    font-size: 17px;  color: #636363;
     transition: top .5s ease;
 }
 
@@ -71,20 +65,46 @@ body {
 }
 
 .action{ 
-
     display: flex;
-
 }
+
+.collegeSelect {
+    border:1px solid #C7E2F6;
+    margin-right: 11px;
+}
+
+.collegeInformWrapper {
+    position: relative;
+    
+}
+
+.collegeInformInput {
+    width: 150px;
+    height: 33px;
+    padding-left: 10px;
+    background-color: transparent;
+    border-radius: 13px;
+    border:1px solid #C7E2F6;
+    font-size: 16px; color: #1a1919;
+    outline: none; 
+    margin-right: 12px;
+}
+
+.collegeInformLabel {
+    position: absolute; left: 13px; top: 6px;
+    font-size: 15px;  color: #636363;
+}
+
 
 .btn-area {
     position: static;
     margin-left: 40%;
-    margin-top: 30px;
+    margin-top: 20px;
     width: 350px;
     margin-bottom:10px;
 }
 .btn-area button {
-    width: 30%; height: 50px;
+    width: 30%; height: 45px;
     background: #7694AB;
     color: #fff;
     font-size: 20px;
@@ -113,12 +133,6 @@ body {
     color: #636363;
 }
 
-
-
-
-
-
-
 .memberinfo_radio {
     /*
     display: flex;
@@ -146,7 +160,7 @@ body {
     font-size: 18px; color: #1a1919;
     padding: 20px 20px 20px;
     width: calc(100% - 50px);
-    
+    height: 50px;
 }
 
 .Memberinfo_radio b {
