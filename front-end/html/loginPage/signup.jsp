@@ -1,5 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../resources/static/css/headerStyle.css">
     <link rel="stylesheet" href="../resources/static/css/signupStyle.css">
+    <!-- <link rel="stylesheet" href="../../css/headerStyle.css">
+    <link rel="stylesheet" href="../../css/loginPage/signupStyle.css"> -->
 </head>
 <body>
 	<div class="headerWrapper"> <!-- header start -->
@@ -43,14 +43,26 @@
 			</div>
 		</nav>
 	</div> <!-- header end -->
+
+    <!-- test -->
+    <!-- 모달 대화 상자 -->
+    <div id="myModal" class="modal">
+        <!-- 모달 내용 -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3 id="modalTitle">아이디 오류</h3>
+            <p id="modalMessage"> 아이디 형식: 영문자, 숫자, 밑줄(_),점(.)<br>3~15자의 문자열</p>
+        </div>
+    </div>
+    <!-- test -->
+
     <section class="signin-form">
         <h1> 회원가입 </h1>
+
         <form action="userInsert.do" method = "POST">
             <div class="int-area">
                 <input type ="text" name ="userId" id="userId" autocomplete="off" required>
                  <label for ="userId"> 아이디</label>
-               
-             
             </div >
             <div class="int-area">
                 <input type="password" name="userPass" autocomplete="off" required >
@@ -67,11 +79,11 @@
                 </div>
             <!--</div>-->
             <div class="int-area">
-                <input type="text"name="userTel"autiocomplete="off"required >
+                <input type="text"name="userTel" id="userTel" autiocomplete="off"required >
                 <label for="userTel">전화번호</label>
             </div>
             <div class="int-area">
-                <input type="text"name="userAge"autiocomplete="off"required >
+                <input type="text"name="userAge" id="userAge" autiocomplete="off"required >
                 <label for="userAge"> 나이 </label>
             </div>
         </div>
@@ -88,7 +100,7 @@
                 <input class="collegeInformInput"type="text" placeholder="전공" name="userMajor"autiocomplete="off"required >
             </div>
             <div class="collegeInformWrapper">
-                <input class="collegeInformInput" type="text" placeholder="학번" name="userClassNum"autiocomplete="off"required >
+                <input class="collegeInformInput" type="text" id="userClassNum" placeholder="학번" name="userClassNum"autiocomplete="off"required >
             </div>
         </div>
             <div class="memberinfo_radio">
@@ -105,11 +117,9 @@
             <div class="btn-area">
 				<button type="submit">가입</button>
             </div>
-            
-    
         </form>
     </section>
 
-    
+    <script src="../../js/joinCheck.js"></script>
 </body>
 </html>
